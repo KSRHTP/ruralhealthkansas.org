@@ -636,10 +636,14 @@ tbody tr:hover { background:#F8FAFD; cursor:pointer; }
 .detailRow:last-child{border-bottom:none}
 .profileSource{margin-top:14px;padding:12px;background:#F4F7FB;border-radius:10px;font-size:11px;line-height:1.55;color:#42576C}
 .hospitalTableWrap{overflow:auto}
-.hospitalTable{width:100%;border-collapse:collapse;font-size:12px}
+.hospitalTable{width:100%;border-collapse:separate;border-spacing:0 9px;font-size:12px}
 .hospitalTable th{background:var(--blue-dark);color:#fff;padding:9px;text-align:left;position:sticky;top:0}
-.hospitalTable td{padding:9px;border-bottom:1px solid #E9EEF4;white-space:nowrap}
-.hospitalTable tr:hover{background:#F7FAFD;cursor:pointer}
+.hospitalTable td{padding:11px 9px;border-top:1px solid #E9EEF4;border-bottom:1px solid #E9EEF4;background:#fff;white-space:nowrap}
+.hospitalTable tbody tr{--geo:#8FA1B3;box-shadow:0 3px 10px rgba(17,44,74,.06)}
+.hospitalTable tbody tr.geoUrban{--geo:#7D1230}.hospitalTable tbody tr.geoRural{--geo:#0051A5}.hospitalTable tbody tr.geoFrontier{--geo:#D39B00}
+.hospitalTable tbody tr td:first-child{border-left:7px solid var(--geo);border-radius:10px 0 0 10px}
+.hospitalTable tbody tr td:last-child{border-right:1px solid #E9EEF4;border-radius:0 10px 10px 0}
+.hospitalTable tr:hover td{background:#F7FAFD;cursor:pointer}
 @media(max-width:1050px){.hospitalGrid{grid-template-columns:repeat(2,1fr)}.profileGrid{grid-template-columns:1fr}.hospitalKpis,.profileKpis{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.hospitalGrid{grid-template-columns:1fr}.hospitalSearch{min-width:100%}.hospitalHero h3{font-size:23px}.hospitalKpis,.profileKpis{grid-template-columns:1fr 1fr}}
 </style>
@@ -1430,7 +1434,7 @@ function renderHospitalExplorer(){
       </div><div style="margin-top:9px">${hSource()}</div>
     </div>`).join("");
   document.getElementById("hospitalTableBody").innerHTML=rows.map(h=>`
-    <tr onclick='openHospitalProfile(${JSON.stringify(h.ccn)})'>
+    <tr class="${hospitalGeoClass(h)}" onclick='openHospitalProfile(${JSON.stringify(h.ccn)})'>
       <td><b>${hospitalNameLink(h)}</b><br><span style="color:#617389">CCN ${h.ccn}</span></td><td>${h.city}</td><td><span class="geoBadge ${hospitalGeoClass(h)}">${hospitalGeo(h)}</span></td><td>${facilityGroup(h)}</td><td>${h.system||"Not available"}</td>
       <td>${hFmtPct(h.latest.operatingMargin)}</td><td>${hFmtNum(h.latest.daysCash)}</td><td>${hFmtNum(h.latest.currentRatio)}</td><td>${hFmtMoney(h.latest.npr)}</td><td>${h.emr||"Not available"}</td>
     </tr>`).join("");
