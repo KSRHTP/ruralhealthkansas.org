@@ -1390,11 +1390,8 @@ function trendSvg(values,label,formatter,years){
   const labels=yrLabels.map((yr,i)=>`<text x="${x(i)}" y="${H-7}" text-anchor="middle" style="font-size:10px;fill:#617389">${yr||""}</text>`).join("");
   return `<svg viewBox="0 0 ${W} ${H}"><line x1="${pad}" y1="${H-pad}" x2="${W-pad}" y2="${H-pad}" stroke="#CCD6E1"/><polyline points="${pts}" fill="none" stroke="#0051A5" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>${dots}${labels}</svg>`;
 }
-function hospitalHealth(h){
-  const om=h.latest.operatingMargin,dc=h.latest.daysCash;
-  if(om!==null&&om<-0.1 || dc!==null&&dc<30) return "At risk";
-  if(om!==null&&om<0 || dc!==null&&dc<60) return "Watch";
-  return "Stable";
+function hospitalAdc(h){
+  return h.patientDays===null||h.patientDays===undefined?"N/A":(h.patientDays/365).toFixed(1);
 }
 const FRONTIER_HOSPITAL_HINTS=new Set(["Ashland","Quinter","Smith Center","Tribune","Greensburg"]);
 function hospitalGeo(h){
@@ -1430,7 +1427,7 @@ function renderHospitalExplorer(){
         <div class="hospitalMetric"><div class="k">Operating margin</div><div class="v">${hFmtPct(h.latest.operatingMargin)}</div></div>
         <div class="hospitalMetric"><div class="k">Days cash</div><div class="v">${hFmtNum(h.latest.daysCash)}</div></div>
         <div class="hospitalMetric"><div class="k">Net patient revenue</div><div class="v">${hFmtMoney(h.latest.npr)}</div></div>
-        <div class="hospitalMetric"><div class="k">Status</div><div class="v">${hospitalHealth(h)}</div></div>
+        <div class="hospitalMetric"><div class="k">Average daily census</div><div class="v">${hospitalAdc(h)}</div></div>
       </div><div style="margin-top:9px">${hSource()}</div>
     </div>`).join("");
   document.getElementById("hospitalTableBody").innerHTML=rows.map(h=>`
@@ -1447,7 +1444,7 @@ function openHospitalProfile(ccn){
   const medicaidShare=payerTotal&&p.medicaid!==null&&p.medicaid!==undefined?p.medicaid/payerTotal:null;
   const commercialShare=payerTotal&&p.commercial!==null&&p.commercial!==undefined?p.commercial/payerTotal:null;
   document.getElementById("modalBody").innerHTML=`
-    <div class="profileHeader"><div><h2>${hospitalNameLink(h)}</h2><div>${h.city}, Kansas | CCN ${h.ccn}</div><div class="profileBadges"><span class="profileBadge">${facilityGroup(h)}</span><span class="profileBadge">${hospitalHealth(h)}</span><span class="profileBadge">${h.system||"System not available"}</span>${h.emr?`<span class="profileBadge">EMR: ${h.emr}</span>`:""}</div></div></div>
+    <div class="profileHeader"><div><h2>${hospitalNameLink(h)}</h2><div>${h.city}, Kansas | CCN ${h.ccn}</div><div class="profileBadges"><span class="profileBadge">${facilityGroup(h)}</span><span class="profileBadge">ADC: ${hospitalAdc(h)}</span><span class="profileBadge">${h.system||"System not available"}</span>${h.emr?`<span class="profileBadge">EMR: ${h.emr}</span>`:""}</div></div></div>
     <div class="profileKpis">
       <div class="profileKpi"><div class="k">Operating margin (${h.latest.operatingMarginYear||"latest"})</div><div class="v">${hFmtPct(h.latest.operatingMargin)}</div>${hSource()}</div>
       <div class="profileKpi"><div class="k">Days cash (${h.latest.daysCashYear||"latest"})</div><div class="v">${hFmtNum(h.latest.daysCash)}</div>${hSource()}</div>
