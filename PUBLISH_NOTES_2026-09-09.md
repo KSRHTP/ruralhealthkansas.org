@@ -1,0 +1,1 @@
+September 2026 Rural Health Kansas update package. Includes Year 2 program and budget information, clinically integrated network updates including Astra Health, Care Collaborative coverage, and updated money-flow content sourced from the September 2026 update materials. The production index loads the compressed site package stored under assets/site-2026-09-09/.
