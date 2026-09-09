@@ -11,7 +11,7 @@
 <script>
 (async()=>{
   try{
-    const files=Array.from({length:8},(_,i)=>`assets/site-2026-09-09/part${String(i).padStart(2,'0')}.txt`);
+    const files=Array.from({length:12},(_,i)=>`assets/site-2026-09-09/part${String(i).padStart(2,'0')}.txt`);
     const parts=await Promise.all(files.map(async f=>{const r=await fetch(f,{cache:'no-store'});if(!r.ok)throw new Error(`${f}: HTTP ${r.status}`);return (await r.text()).trim();}));
     const b64=parts.join('');
     const bin=atob(b64);
