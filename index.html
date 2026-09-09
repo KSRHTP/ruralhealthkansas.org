@@ -12,7 +12,7 @@
 <script>
 (async()=>{
   try{
-    const files=Array.from({length:13},(_,i)=>`assets/site-2026-09-09/part${String(i).padStart(2,'0')}.txt?v=20260909-2`);
+    const files=Array.from({length:13},(_,i)=>`assets/site-2026-09-09/part${String(i).padStart(2,'0')}.txt?v=20260909-3`);
     const parts=await Promise.all(files.map(async f=>{const r=await fetch(f,{cache:'no-store'});if(!r.ok)throw new Error(`${f}: HTTP ${r.status}`);return (await r.text()).trim();}));
     const b64=parts.join('');
     const bin=atob(b64);
@@ -31,7 +31,7 @@
     }
     if(!html.toLowerCase().includes('<!doctype html') && !html.toLowerCase().includes('<html'))throw new Error('Site package did not decode correctly.');
     document.open();document.write(html);document.close();
-  }catch(e){document.querySelector('.spin').style.display='none';const m=document.getElementById('msg');m.className='err';m.textContent='Unable to load the updated site.\n'+e.message;console.error(e);}
+  }catch(e){document.querySelector('.spin').style.display='none';const m=document.getElementById('msg');m.className='err';m.textContent='Unable to load the updated site.\n'+(e?.message || String(e));console.error(e);}
 })();
 </script>
 </body>
