@@ -21,7 +21,7 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",sa
    'part00.txt','part01.txt','part02.txt','part03.txt','part04.txt','part05.txt','part06.txt',
    'tailA.txt','part08.txt','part09.txt','tailB.txt','part11.txt','part12.txt'
   ];
-  const files=names.map(n=>`assets/site-2026-09-13-gz2/${n}?v=20260913-1`);
+  const files=names.map(n=>`assets/site-2026-09-13-gz2/${n}?v=20260913-2`);
   const parts=await Promise.all(files.map(async f=>{
     const r=await fetch(f,{cache:'no-store'});
     if(!r.ok) throw new Error(`${f}: HTTP ${r.status}`);
@@ -43,6 +43,25 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",sa
     if(!window.pako) throw new Error('Decoder library did not load.');
     html=window.pako.ungzip(gz,{to:'string'});
   }
+
+  /* Sept. 13 Astra Health reconciliation patch. The compressed package remains the
+     source document; these five HCRIS-backed rows replace the Astra member objects
+     at load time so the live grid uses the verified latest public filings. */
+  const astraRows={
+   "The University of Kansas Health System":{"network":"Astra","exm":6.0,"dcoh":126,"cr":1.46,"outp":63.0,"adc":604.98,"npr":3227.321,"opinc":-1198.444,"netinc":283.811,"name":"The University of Kansas Health System","city":"Kansas City","county":"Wyandotte","lat":39.0572,"lon":-94.6105,"type":"Academic","beds":798,"beds_note":"staffed acute beds · University of Kansas Hospital flagship filing","om":-37.1,"period":"FY2025 HCRIS","prog":"network","amt":0,"aff":"Government hospital district/authority · University of Kansas Hospital flagship filing for TUKHS founder","x":762.2,"y":128.9},
+   "Salina Regional Health Center":{"network":"Astra","exm":22.1,"dcoh":470,"cr":5.32,"outp":69.0,"adc":59.4,"npr":408.395,"opinc":80.234,"netinc":99.669,"name":"Salina Regional Health Center","city":"Salina","county":"Saline","lat":38.8403,"lon":-97.6114,"type":"Acute","beds":145,"beds_note":"staffed acute beds","om":18.7,"period":"FY2025 HCRIS","prog":"RPGP","amt":932310,"aff":"Independent · RHTP anchor hospital · holds the Astra Health RPGP award","x":456.8,"y":157.3},
+   "Newman Regional Health":{"network":"Astra","exm":null,"dcoh":59,"cr":null,"outp":null,"adc":null,"npr":null,"opinc":null,"netinc":null,"name":"Newman Regional Health","city":"Emporia","county":"Lyon","lat":38.4039,"lon":-96.1817,"type":"CAH","beds":25,"beds_note":"critical access hospital","om":-6.9,"period":"FY2024 HCRIS","prog":"CHW + A-FIM","amt":110716,"aff":"Government-local CAH · RHTP anchor hospital · CEO Cathy Pimple","x":602.3,"y":214.4},
+   "LMH Health":{"network":"Astra","exm":7.8,"dcoh":144,"cr":3.29,"outp":80.0,"adc":53.71,"npr":389.231,"opinc":5.498,"netinc":32.991,"name":"LMH Health","city":"Lawrence","county":"Douglas","lat":38.9717,"lon":-95.2353,"type":"Acute","beds":100,"beds_note":"staffed acute beds · Lawrence Memorial Hospital","om":1.4,"period":"FY2024 HCRIS","prog":"network","amt":0,"aff":"Government-local / nonprofit community hospital · Lawrence Memorial Hospital","x":698.6,"y":140.1},
+   "Amberwell Health":{"network":"Astra","exm":-0.2,"dcoh":106,"cr":2.32,"outp":87.4,"adc":6.05,"npr":52.968,"opinc":-6.476,"netinc":-0.134,"name":"Amberwell Health","city":"Atchison","county":"Atchison","lat":39.5631,"lon":-95.1214,"type":"CAH","beds":25,"beds_note":"Amberwell Atchison campus filing · system also includes Hiawatha CAH","om":-11.6,"period":"FY2024 HCRIS · Amberwell Atchison","prog":"network","amt":0,"aff":"Independent two-hospital system · Atchison campus metrics shown; Hiawatha is also a CAH","x":710.2,"y":62.8}
+  };
+  Object.entries(astraRows).forEach(([name,row])=>{
+    const safe=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const rx=new RegExp('\\{"network":"Astra"[^{}]*"name":"'+safe+'"[^{}]*\\}');
+    html=html.replace(rx,JSON.stringify(row));
+  });
+  html=html.replace(/<div class="sub" style="margin-top:8px">Astra Health figures:.*?<\/div>/s,
+   '<div class="sub" style="margin-top:8px"><b>Astra Health grid:</b> refreshed September 13, 2026 from public CMS HCRIS cost reports. University of Kansas Health System is represented by the University of Kansas Hospital flagship filing; Amberwell Health is represented by its Atchison CAH filing. Newman Regional Health has verified FY2024 operating margin, days cash and staffed-bed data; metrics not available in the retrieved public panel remain blank rather than estimated.</div>');
+
   if(!html.toLowerCase().includes('<html') || !html.includes('Astra Health')) throw new Error('Site package did not decode correctly.');
   document.open(); document.write(html); document.close();
  }catch(e){
