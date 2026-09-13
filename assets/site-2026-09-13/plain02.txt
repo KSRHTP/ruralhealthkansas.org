@@ -1,0 +1,140 @@
+516A;font-weight:750}
+.topnav-in>a:hover{color:#0072CE}
+.yeartabs{background:#F4F6FA;border-top:1px solid #E3E8EF;border-bottom:0;padding:7px 24px;justify-content:center}
+.yeartab{border-radius:999px;padding:5px 10px;background:#fff;border:1px solid #D6DDE8}
+.yeartab.on{background:#002F5F;color:#fff;border-color:#002F5F}
+.yeartab.on .ytag{color:#FFD84D}
+header{background:linear-gradient(120deg,#002F5F 0%,#063E76 72%,#0B5FA8 100%);padding:36px 24px}
+header .eyebrow{color:#FFD84D}
+header p{color:#E8F1FA;max-width:860px}
+.card{box-shadow:0 2px 8px rgba(0,47,95,.035)}
+h2.serif{color:#002F5F}
+thead th{background:#002F5F}
+.update-banner{max-width:980px;margin-top:14px;padding:12px 14px;background:#fff;border-left:5px solid #F6B700;border-radius:6px;color:#27374D;font-size:13px;line-height:1.5;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.update-banner a{color:#0072CE;font-weight:800;text-decoration:none}
+.update-banner a:hover{text-decoration:underline}
+.pub-hero{border-top:4px solid #F6B700}
+.pub-kick{color:#C8102E}
+.pub-tiles a{border-left-color:#0072CE}
+.pub-tiles a:hover{border-left-color:#C8102E}
+#y2-view header,#cin-view header,#cca-view header{background:linear-gradient(120deg,#002F5F 0%,#063E76 72%,#0B5FA8 100%)}
+@media(max-width:900px){.topnav-in{gap:7px 11px}.topnav-in>a{font-size:11px}.ed{display:none}}
+@media(max-width:640px){.topnav{position:relative}.topnav-in{padding:9px 14px}.topnav-in>a{display:none}.topnav-in .brand{display:inline-flex}.yeartabs{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding:7px 12px}.ytracks{display:flex;white-space:nowrap}}
+</style>
+</head>
+<body>
+<nav class="topnav">
+<div class="topnav-in">
+<span class="brand" aria-label="Kansas Rural Health Investment Explorer"><svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Kansas Rural Health Investment Explorer"><g fill="#F6B700"><ellipse id="khe-petal" cx="50" cy="23" rx="6.1" ry="16.2"/><use href="#khe-petal" transform="rotate(30 50 50)"/><use href="#khe-petal" transform="rotate(60 50 50)"/><use href="#khe-petal" transform="rotate(90 50 50)"/><use href="#khe-petal" transform="rotate(120 50 50)"/><use href="#khe-petal" transform="rotate(150 50 50)"/><use href="#khe-petal" transform="rotate(180 50 50)"/><use href="#khe-petal" transform="rotate(210 50 50)"/><use href="#khe-petal" transform="rotate(240 50 50)"/><use href="#khe-petal" transform="rotate(270 50 50)"/><use href="#khe-petal" transform="rotate(300 50 50)"/><use href="#khe-petal" transform="rotate(330 50 50)"/></g><path d="M32 48.6 H68" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" fill="none"/><g stroke="#35536D" stroke-linecap="round" fill="none"><path d="M36.4 52 H63.6" stroke-width="4.2"/><path d="M47.9 53.6 L39.2 74.2" stroke-width="5.2"/><path d="M52.1 53.6 L60.8 74.2" stroke-width="5.2"/></g><circle cx="50" cy="41.2" r="8.6" fill="#FFFFFF"/><circle cx="50" cy="41.2" r="7.1" fill="#0F5FBF"/><circle cx="50" cy="41.2" r="3.5" fill="#0B2545"/></svg><span class="wm"><span class="l1">Kansas</span><span class="l2">Rural Health</span><span class="l3">Investment Explorer</span></span></span>
+<a href="#kpis">Dashboard</a>
+<a href="#jump-map">Map</a>
+<a href="#timeline">Timeline</a>
+<a href="#jump-awards">Awards</a>
+<a href="#" class="goto" data-view="cin" data-target="#cin-kpis">CIN</a>
+<a href="#jump-budget">Planned</a>
+<a href="#jump-moved">Flow</a>
+<a href="#y2-sources" class="goto" data-view="y2" data-target="#y2-sources">Resources</a>
+<a href="#" class="goto" data-view="cca" data-target="#cca-kpis">Care Collaborative</a>
+<a href="#" class="yeartab nat" data-view="nat">Other States</a>
+<span class="ed">Public edition · updated September 13, 2026</span>
+</div>
+<div class="yeartabs"><span class="ylab">Program year</span>
+<a class="yeartab on" href="#" data-view="y1">Year 1<span class="ytag">Awarded</span></a>
+<a class="yeartab" href="#" data-view="y2">Year 2<span class="ytag">NEW · Proposed</span></a>
+<a class="yeartab dis" href="#" data-view="y3" aria-disabled="true">Year 3</a>
+<a class="yeartab dis" href="#" data-view="y4" aria-disabled="true">Year 4</a>
+<a class="yeartab dis" href="#" data-view="y5" aria-disabled="true">Year 5</a>
+<span class="ytracks"><span class="tsep"></span><span class="ylab">Deep dives</span>
+<a class="yeartab tracktab" href="#" data-view="cca">Care Collaborative</a>
+<a class="yeartab tracktab" href="#" data-view="cin">3 announced CINs</a>
+</span>
+</div>
+</nav>
+<div id="ks-view">
+<header><div class="wrap">
+<div class="eyebrow">Year 1 · Awarded · December 31, 2025 – October 30, 2026</div>
+<h1 class="serif">Kansas Rural Health Transformation Program — Year 1</h1>
+<p>Kansas received $221.9 million for the first year of the federal Rural Health Transformation Program — the sixth-largest award in the nation. This tab follows that money from Washington to each named hospital, clinic, agency, vendor, and program: the competitive grants announced in May, the contracts the State signed without competition because they were written into its federal budget request, and the organizations that administer the dollars on the State’s behalf. It also shows what the State has told Washington it has actually committed and paid so far, and which hospitals are forming new networks with this funding.</p>
+<div class="last-updated">Updated September 13, 2026 · Year 2 plan + Astra hospital grid completed</div>
+<div class="update-banner"><b>Major update:</b> Kansas has submitted its Year 2 plan. The explorer now tracks the full proposed $221.9M Year 2 budget, named recipients and unawarded pools, the three announced hospital networks — Kansas High Value Network, PrairieLINK Health Alliance, and Astra Health — plus the 91-organization Care Collaborative infrastructure that administers major portions of the program. <a href="#" class="goto" data-view="y2" data-target="#y2-change">Open Year 2 →</a></div>
+</div></header>
+<main>
+<section class="card pub-hero" id="pub-hero">
+<div class="pub-kick">A public ledger of federal rural health money in Kansas</div>
+<h2 class="serif">$1.1 billion over five years. $221.9 million a year. Here is where it goes.</h2>
+<p>In December 2025 the federal government awarded Kansas $221,898,008 a year for five years under the Rural Health Transformation Program. The State of Kansas decides who receives it. This ledger follows every dollar that has been named, announced, obligated, or proposed — and shows what changes from year to year, which hospitals are forming new networks, and who administers the money along the way. It is compiled entirely from public documents.</p>
+<div class="pub-tiles">
+<a href="#budget"><b>Where the money goes</b><span>$221.9M by initiative, program, and the agency or contractor that controls it</span></a>
+<a href="#jump-awards"><b>Who is getting it</b><span>Every named award and contract, mapped, searchable, and sortable</span></a>
+<a href="#" class="goto" data-view="y2" data-target="#y2-change"><b>What changes in Year 2</b><span>The State’s proposed second-year plan set against Year 1</span></a>
+<a href="#" class="goto" data-view="cin" data-target="#cin-kpis"><b>The networks forming</b><span>Three hospital networks, their members, their finances, and the money behind them</span></a>
+</div>
+<div class="pub-def"><b>Four words that matter here:</b> <i>Awarded</i> — publicly named by the State. <i>Proposed</i> — in the Year 2 plan, pending federal approval by October 31, 2026. <i>Obligated</i> — a signed commitment the State has reported to Washington. <i>Disbursed</i> — actually paid out. As of the State’s first federal report, $127.0 million was obligated and $5.5 million had been paid.</div>
+</section>
+<section class="grid4" id="kpis"></section>
+<section class="cols">
+<div class="card">
+<h2 class="serif" id="jump-moved">How much has moved?</h2>
+<div class="sub">Share of the total Year 1 award, measured two ways: contracted at the state level and awarded to named recipients.</div>
+<div class="silos" id="silos"></div>
+</div>
+<div class="card">
+<h2 class="serif" id="jump-budget">Where the $221.9M is budgeted</h2>
+<div class="sub">Year 1 allocation across Kansas’s five initiatives, per Kansas RHT Plan Year 1 Budget Narrative Revision 2 (July 2026).</div>
+<div id="initbars"></div>
+<div class="sub" style="margin-top:10px;margin-bottom:0">The $115.4M recipient total includes RPGP, REH/CAP, CHW + A-FIM, and five named contracted implementations across Initiatives 1, 2, and 5.</div>
+</div>
+</section><section class="card" id="opps">
+<h2 class="serif" id="jump-opps">Open funding opportunities</h2>
+<div class="sub">Competitive and vendor-selection RHTP windows currently visible from HEALTHWORKS / KHA Foundation and KDADS materials. Data refreshed August 7, 2026 from the user-provided KDADS rural nursing facility opportunity summary; confirm every deadline on the source page before acting.</div>
+<div class="oppgrid">
+<div class="opp" style="border-top:3px solid #0072CE"><span class="pill awarded">Pending Award</span><h3>KDADS Rural Nursing Facility Complex Dementia Care Pilot</h3><div class="oamt">Up to $200K + per-diem add-on</div><div class="odue">Q&amp;A deadline August 7, 2026 · applications due August 21, 2026 (15 days)</div><div class="odesc">Kansas RHTP pilot from the KDADS Aging Services Commission funding rural nursing facilities to improve care for Medicaid recipients aged 60+ with dementia and complex behaviors.</div></div>
+<div class="opp"><span class="pill awarded">Pending Award</span><h3>CFO Mentoring and Financial Leadership Support Program</h3><div class="oamt">RTSO track</div><div class="odue">Application window closed July 29, 2026</div><div class="odesc">Revenue Technical Support Organization workstream supporting CFO mentoring and financial leadership capacity for rural hospitals.</div></div>
+<div class="opp"><span class="pill awarded">Pending Award</span><h3>Revenue Support Program RFP</h3><div class="oamt">RTSO track</div><div class="odue">Application window closed July 30, 2026</div><div class="odesc">Revenue-cycle support track tied to centralized expertise, payer analytics, claims recovery, legal and reimbursement support, and operational improvement.</div></div>
+<div class="opp"><span class="pill awarded">Pending Award</span><h3>Kansas All Payers Scorecard Program RFP</h3><div class="oamt">RTSO track</div><div class="odue">Application window closed July 31, 2026</div><div class="odesc">All-payer scorecard workstream under the Revenue Technical Support Organization funding opportunity.</div></div>
+<div class="opp"><span class="pill awarded">Pending Award</span><h3>Interfacility Transport Project (IFTp)</h3><div class="oamt">~$868K Y1</div><div class="odue">Application window closed July 31, 2026</div><div class="odesc">Launches the first of seven planned regional 24/7/365 paramedic-plus-RN transport teams to reduce transfer delays from rural facilities.</div></div>
+<div class="opp"><span class="pill awarded">Awarded</span><h3>Centralized Credentialing Verification Pilot Program</h3><div class="oamt">Up to $980K in Year 1</div><div class="odue">Hospital Services Corporation selected, contingent upon required security, technology, privacy, and compliance reviews</div><div class="odesc">HEALTHWORKS selected Hospital Services Corporation (HSC) as the preferred vendor for the Centralized Credentialing Verification Pilot Program. The pilot supports a centralized credentialing model for Kansas providers and payers while preserving hospital privileging authority and payer credentialing authority. <a href="https://www.hsccentral.net/" rel="noopener" target="_blank" style="color:var(--sky);font-weight:600">HSC website ↗</a></div></div>
+</div>
+
+</section>
+
+<details class="card glossary">
+<summary>New to this program? Plain-language guide &amp; acronym legend</summary>
+<p class="gintro">The Rural Health Transformation Program (RHTP) is a federal program created by Congress in July 2025 that sends $50 billion to states over five years (2026–2030) to strengthen rural health care. Kansas received $221.9 million for Year 1. The Kansas Department of Health and Environment (KDHE) runs the state’s program and awards the money to hospitals, clinics, and other organizations through grants and contracts. This tracker follows where every publicly traceable dollar goes.</p>
+<div class="ggrid">
+<div class="ggroup"><div class="gtitle">The agencies &amp; players</div><dl><dt>CMS</dt><dd>Centers for Medicare &amp; Medicaid Services — the federal agency that awards and oversees the money.</dd><dt>KDHE</dt><dd>Kansas Department of Health and Environment — the state agency running Kansas's program.</dd><dt>SFC</dt><dd>Kansas State Finance Council — the Governor and legislative leaders; receives reports on how federal funds are used.</dd><dt>KHA</dt><dd>Kansas Hospital Association.</dd><dt>KUMC</dt><dd>University of Kansas Medical Center.</dd><dt>KDA</dt><dd>Kansas Dental Association — administers the dental educational awards.</dd></dl></div>
+<div class="ggroup"><div class="gtitle">The law &amp; paperwork</div><dl><dt>RHTP</dt><dd>Rural Health Transformation Program — the $50 billion, five-year federal program this tracker follows.</dd><dt>OBBBA</dt><dd>One Big Beautiful Bill Act (H.R. 1, July 2025) — the federal law that created the program.</dd><dt>SF-424A</dt><dd>The standard federal budget form — shows how the state plans to spend the award, category by category.</dd><dt>RFA</dt><dd>Request for Applications — how the state invites organizations to compete for grant money.</dd></dl></div>
+<div class="ggroup"><div class="gtitle">Kansas's grant programs</div><dl><dt>RPGP</dt><dd>Regional Partnerships Grant Program — grants for collaborative projects among rural providers ($49.9M awarded).</dd><dt>REH/CAP</dt><dd>Rural Emergency Hospital Conversion / Transformative Capital Investment Program — building and equipment grants ($31.3M awarded across 18 recipients).</dd><dt>EBP</dt><dd>Evidence-Based Practice Program — payments to hospitals and clinics for adopting proven care practices and reporting quality data.</dd><dt>AHAP</dt><dd>Anchor Hospital Advancement Program — AI and records-system upgrades delivered through large “anchor” hospitals.</dd><dt>CHW + A-FIM</dt><dd>Community Health Worker + Accountable Food Is Medicine — places trained health workers in clinics and funds food-as-medicine services.</dd><dt>PACE</dt><dd>Program of All-Inclusive Care for the Elderly — wraparound medical and social care that helps seniors stay out of nursing homes.</dd><dt>ACO</dt><dd>Accountable Care Organization — a group of providers jointly responsible for the quality and cost of care.</dd><dt>APCD</dt><dd>All Payer Claims Database — a statewide collection of insurance claims used to analyze prices and care patterns.</dd></dl></div>
+<div class="ggroup"><div class="gtitle">Types of providers</div><dl><dt>CAH</dt><dd>Critical Access Hospital — a small rural hospital (25 beds or fewer) with special Medicare status.</dd><dt>REH</dt><dd>Rural Emergency Hospital — a federal designation for hospitals that convert to emergency and outpatient care only, with no inpatient beds.</dd><dt>FQHC</dt><dd>Federally Qualified Health Center — a community clinic that must serve patients regardless of their ability to pay.</dd><dt>RHC</dt><dd>Rural Health Clinic — a certified outpatient clinic in a rural underserved area.</dd><dt>CCBHC</dt><dd>Certified Community Behavioral Health Clinic — a clinic providing a full range of mental health and addiction services.</dd><dt>CHW</dt><dd>Community Health Worker — a trained local worker who connects residents to care and social services.</dd></dl></div>
+<div class="ggroup"><div class="gtitle">How this tracker classifies geography</div><dl><dt>FORHP</dt><dd>Federal Office of Rural Health Policy — sets the federal definition of “rural” used here.</dd><dt>RUCA</dt><dd>Rural-Urban Commuting Area codes — the census-based system behind the urban/rural split.</dd><dt>Frontier</dt><dd>Counties with fewer than 6 people per square mile — the most remote tier.</dd><dt>HQ</dt><dd>Headquarters — classification reflects where the recipient organization is based, not necessarily where it delivers services.</dd></dl></div>
+</div>
+<div class="gclin"><b>Clinical shorthand:</b> BH = behavioral health · SUD = substance use disorder · I/DD = intellectual &amp; developmental disabilities · MAT = medication-assisted treatment · CBT = cognitive behavioral therapy · DPP = Diabetes Prevention Program · EMS = emergency medical services · EHR = electronic health record · OB = obstetrics · ED = emergency department · LTC = long-term care · CMA = certified medical assistant · CME/CEU = continuing education credits · CVO = credentialing verification organization · TSO = technical support organization · PC-PH = primary care–public health · DEXA = bone-density scan</div>
+</details>
+<section class="card" id="initiatives">
+<h2 class="serif" id="jump-initiatives">The five initiatives — Year 1 spending</h2>
+<div class="sub">Click any initiative to expand its goal and the programs beneath it. Bars are scaled to the largest initiative; percentages are share of the $221.9M Year 1 award.</div>
+<div class="acc" id="accbox"></div>
+<div class="hint">Tip: open more than one to compare. Program-level figures per the KDHE briefing (draft).</div>
+</section>
+<section class="card" id="progslate">
+<h2 class="serif" id="jump-programs">The 24-program slate: budget, owner &amp; execution status</h2>
+<div class="sub">Every Year 1 program beneath the five initiatives, with its budget, owning agency, and current phase — Design → Agreements → Execution — from the KDHE program briefing. Programs 21 (RPGP) and 22 (REH/CAP) are the competitive grants behind the <a href="#jump-awards" style="color:var(--sky)">66 named awards, contracted implementations, and budget-narrative contracts</a> and the <a href="#" class="goto" data-view="cin" data-target="#cinsec" style="color:var(--sky)">clinically integrated networks</a> detailed below.</div>
+<div class="filters" id="progchips2"></div>
+<div class="legendp">
+<span>Phase:</span>
+<span><span class="ph"><i class="dD">D</i></span> Design</span>
+<span><span class="ph"><i class="dA">A</i></span> Agreements</span>
+<span><span class="ph"><i class="dE">E</i></span> Execution</span>
+<span style="margin-left:auto">Owners: KDHE, KDADS, CCA (KU Health System Care Collaborative)</span>
+</div>
+<h3 class="serif" style="font-size:15px;margin:16px 0 3px">Who administers the money</h3>
+<div class="sub" style="margin-bottom:10px">Year 1 program dollars by owning agency. KDHE holds the two competitive grants (RPGP + REH/CAP) that carry named public awardees; the Care Collaborative (CCA) administers the most programs and the largest share of non-competitive dollars.</div>
+<div id="ownerbars"></div>
+<div class="sub" id="ownernote" style="margin:10px 0 2px"></div>
+<div class="table-scroll"><table id="progtable"></table></div>
+<div class="sub" id="prognote" style="margin-top:10px"></div>
+</section>
+<section class="card" id="cca-members">
+<h2 class="serif" id="jump-cca">TUKHS Care Collaborative — Year 1 participants</h2>
+<div class="sub">The July KHA RHTP update identifies 87 participating hospitals and 202 participating clinics; the roster has been reconciled and verified at 87. The full roster, map, and everything else about CCA across program years now lives on the CCA track.</div>
+<div class="grid4" style="margin-bottom:10px"><div class="card kpi"><div class="k">Participating hospitals</div><div class="v serif">87</div><div class="s">Verified names</div></div><div class="card kpi"><div class="k">Participating clinics</div><div class="v serif">202</div><div class="s">Source-declared count</div></div><div class="card kpi"><div class="k">Year 1 obligated to CCA</div><div class="v serif">$101.3M</div><div class="s">79.8% of all Year 1 obligations</div></div><div class="card kpi"><div class="k">Year 2 proposed as pr
