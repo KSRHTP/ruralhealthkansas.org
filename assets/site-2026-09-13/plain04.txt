@@ -1,0 +1,139 @@
+s restated in the Year 2 Budget Narrative’s five-year tables (the apples-to-apples baseline); colored bars are proposed Year 2. Hover any bar for exact amounts.</div>
+<div id="y2-pairbars"></div>
+<div class="y2-deltagrid" id="y2-deltas"></div>
+<h3 class="serif" style="font-size:15px;margin:18px 0 4px">Reality check — what Year 1 actually did, per the State’s CMS Annual Report</h3>
+<div class="sub" style="margin-bottom:8px">Obligations and disbursements reported in the Kansas Annual Report workbook (Use of Funds and First-Tier Entities tabs) for the first reporting period. Announced awards and executed obligations are different things.</div>
+<div class="grid4" id="y2-actuals"></div>
+<div class="sub" id="y2-actualnote" style="margin-top:8px"></div>
+</section>
+
+<section class="card y2-payerwrap" id="y2-payer">
+<div class="eyebrow" style="color:var(--clay)">Highlight · what the plan says about hospital prices</div>
+<h2 class="serif" style="margin-top:2px">Rate analysis, hospital networks, and direct-to-employer contracting — in the plan’s own words</h2>
+<div class="sub">Four connected pieces of the Year 2 plan are about what hospitals get paid by private insurance and by employers — which, in turn, shapes what Kansans and Kansas businesses pay for coverage. Every quotation below is verbatim from the Year 2 Project Narrative (PN) or Year 2 Budget Narrative (BN), cited to page; dollar figures pair the Year 1 <i>obligation</i> recorded in the CMS Annual Report with the Year 2 <i>proposed</i> budget. One caution up front: the phrase “single signature,” sometimes used to describe one contract covering many hospitals, does not appear anywhere in either document — see card 4 for what the plan says instead.</div>
+<div class="paygrid" id="y2-paycards"></div>
+<div class="y2-timeline">
+<h3 class="serif" style="font-size:15px;margin:16px 0 6px">Dated milestones the State committed to (PN implementation plan, pp. 65–67)</h3>
+<div class="tl" id="y2-paytl"></div>
+</div>
+</section>
+
+<section class="card" id="y2-initiatives">
+<h2 class="serif">The five initiatives — proposed Year 2 spending</h2>
+<div class="sub">Click any initiative to expand its goal and the programs beneath it. Bars are scaled to the largest initiative; percentages are share of the $221.9M Year 2 budget. Each program shows its change against the Year 1 program budget used on the Year 1 tab.</div>
+<div class="acc" id="y2-accbox"></div>
+<div class="hint">Tip: open more than one to compare. Program figures per the Year 2 Budget Narrative; Year 1 comparators per the KDHE program briefing used on the Year 1 tab.</div>
+</section>
+
+<section class="card" id="y2-programs">
+<h2 class="serif">The program slate: Year 2 budget, owner &amp; change vs. Year 1</h2>
+<div class="sub">Every proposed Year 2 program beneath the five initiatives, with its budget, the first-tier agency or prime that administers the money, and what is new. The State is a pass-through: 98.8% of the budget sits in the SF-424A Contract category.</div>
+<div class="filters" id="y2-progchips"></div>
+<div class="legendp"><span>Owner:</span><span><span class="ownb">KDHE</span> state agency &amp; grant pools</span><span><span class="ownb">KDADS</span> sister agency</span><span><span class="ownb">CCA</span> KU Health System Care Collaborative</span><span style="margin-left:auto">Amounts are proposed; nothing is awarded yet</span></div>
+<h3 class="serif" style="font-size:15px;margin:16px 0 3px">Who administers the money — Year 2 proposed vs. Year 1 obligated</h3>
+<div class="sub" style="margin-bottom:10px">First-tier control of Year 2 dollars, computed from the named-recipient registry below. The Year 1 comparator is what each first-tier entity actually had obligated to it in the CMS Annual Report.</div>
+<div id="y2-ownerbars"></div>
+<div class="sub" id="y2-ownernote" style="margin:10px 0 2px"></div>
+<div class="table-scroll"><table id="y2-progtable"></table></div>
+<div class="sub" id="y2-prognote" style="margin-top:10px"></div>
+</section>
+
+<section class="card" style="padding:0" id="y2-awards">
+<div style="padding:18px 20px 0">
+<h2 class="serif">Named recipients &amp; unawarded pools — every dollar in the Year 2 plan</h2>
+<div class="sub">Each row is a proposed first-tier prime or a named downstream partner from the Year 2 Budget Narrative. Rows marked <span class="tbdpill">TBD</span> are budgeted pools or unnamed vendors with no end recipient yet. Filter by initiative, owner, or status; click a column to sort.</div>
+<div class="filters" id="y2-awchips"></div>
+<div class="filters" id="y2-awchips2" style="margin-top:6px"></div>
+<div class="sub" id="y2-awcount" style="margin:6px 0 4px"></div>
+</div>
+<div class="table-scroll" style="margin-top:6px"><table id="y2-awtable"></table></div>
+<div class="sub" id="y2-awnote" style="padding:0 20px 18px"></div>
+</section>
+
+<section class="card" id="y2-cins">
+<h2 class="serif">Clinically integrated networks in the Year 2 plan</h2>
+<div class="sub">Year 1 surfaced two forming CINs — the <b style="color:var(--sky)">Kansas High Value Network</b> and <b style="color:var(--clay)">PrairieLINK</b> — and, on September 8, 2026, a third: <b style="color:#1B8A5A">Astra Health</b>, co-founded by The University of Kansas Health System and funded by a Year 1 RPGP award. All three are detailed on the CIN track. Year 2 makes CIN participation a stated program outcome, funds the rate analysis the plan calls the “foundation” for joint negotiation through CINs, and routes the money through an administrator that is itself a CIN.</div>
+<div class="netcards">
+<div class="netcard sage">
+<h3 style="color:var(--sage)">The administrator is a CIN: the Care Collaborative</h3>
+<div class="tagline">CMS Innovation Center–funded rural CIN · 91 provider organizations · 79 of 105 counties · prime for $108.1M in Year 2</div>
+<div class="kpirow">
+<div class="kpi"><div class="k">Founded</div><div class="v">2014</div></div>
+<div class="kpi"><div class="k">CMS seed award</div><div class="v">$12.4M</div></div>
+<div class="kpi"><div class="k">Provider orgs</div><div class="v">91</div></div>
+<div class="kpi"><div class="k">Y2 dollars as prime</div><div class="v">$108.1M</div></div>
+</div>
+</div>
+<div class="netcard gold">
+<h3 style="color:#8a6d1f">Year 2 dollars that build CIN capacity</h3>
+<div class="tagline">Money whose stated purpose is clinical integration, joint negotiation, or the network plumbing beneath it</div>
+<div class="kpirow">
+<div class="kpi"><div class="k">RPGP pool (CIN-eligible)</div><div class="v">$44.0M</div></div>
+<div class="kpi"><div class="k">EBP “clinical integration” P4P</div><div class="v">$42.2M</div></div>
+<div class="kpi"><div class="k">Rate analysis + credentialing</div><div class="v">$0.99M</div></div>
+<div class="kpi"><div class="k">Direct-to-employer</div><div class="v">$0.19M</div></div>
+</div>
+</div>
+</div>
+<div class="pq"><span class="q">“In 2014, the CMS Innovation Center awarded the University of Kansas Health System (TUKHS), the state’s only academic medical center, $12.4 million to build and operate a rural clinically integrated network. Originally comprised of 13 rural hospitals, the network, known as the Care Collaborative, now includes 91 provider organizations across 79 of Kansas’ 105 counties.”</span><span class="cite">— Year 2 Project Narrative, p. 5</span></div>
+<div class="pq"><span class="q">“By 2031: … All rural providers will actively participate in clinically integrated networks with well-defined regional continuums of care for specified conditions.”</span><span class="cite">— Year 2 Project Narrative, Initiative 4 outcomes, p. 13</span></div>
+<div class="pq"><span class="q">“… the State received dozens of proposals for transformative projects to develop, launch, and/or expand regional partnerships, including shared service lines among adjoining critical access hospitals, a regional hospital readmission reduction program, and proposals to form clinically integrated networks.”</span><span class="cite">— Year 2 Project Narrative, § 2.1 Regional Partnership Grant Program, p. 28</span></div>
+<div class="sub" style="margin-top:10px">Read together: the $44.0M Year 2 RPGP pool can fund new CINs; the $42.2M Evidence-Based Practices program pays providers for measures the plan calls “foundational to clinical integration” (p. 13); and the rate analysis is positioned as the foundation for “joint contract negotiations through clinically integrated networks” (p. 31). The Year 1 tab’s KHVN and PrairieLINK are the first two networks to take shape under this design. <a href="#" class="goto" data-view="cin" data-target="#cin-kpis" style="color:var(--sky);font-weight:600">Open the CIN track →</a></div>
+</section>
+
+<section class="card ink-card" id="y2-watchlist">
+<div class="eyebrow">The Year 2 transparency watchlist — what the public cannot yet see</div>
+<div class="gaps" id="y2-gaps"></div>
+<div class="dates">Key dates: Aug 30, 2026 (Annual Report + BP2 request submitted) · Oct 30, 2026 (Budget Period 1 ends) · Oct 31, 2026 (BP2 approval / Year 2 begins) · Nov 3, 2026 (election) · Q4 2026 (PYA rate analysis commences) · Jan 11, 2027 (Legislature convenes) · Q3 2027 (PYA final rate report) · Sept 30, 2027 (BP1 spend deadline; rate analysis + payer dashboard milestone) · Oct 30, 2027 (Budget Period 2 ends)</div>
+</section>
+
+<footer id="y2-sources">
+<b>Sources &amp; method — Year 2 tab</b>
+<p>Kansas RHT Plan Year 2 Budget Narrative (August 2026, 50 pp.): SF-424A five-year tables, program-level budgets, and capped-use tables 6.1–6.3. Kansas RHT Plan Year 2 Project Narrative (August 2026, 95 pp.): objectives, program descriptions, sustainability approaches, and the implementation plan (pp. 65–67). Kansas Annual Report workbook (CMS RHTP Annual Report template): Use of Funds tab (2,500 obligation rows), First-Tier Entities tab, and Initiative 2 metrics. Year 1 baseline for initiative-level change is the Year 1 column of the Year 2 Budget Narrative’s five-year tables; Year 1 program-level comparators are the KDHE program briefing figures used on the Year 1 tab, and may differ slightly. CCA’s $108.1M is the sum of its Year 2 first-tier contracts and sub-awards from KDHE and excludes additional CCA-administered dollars that flow through KDADS. Named recipients are listed where the source documents name them; TBD rows are budgeted but unawarded. All quotations are verbatim; bracketed text and ellipses mark editorial elisions only.</p>
+<p style="margin-top:8px">Public edition. Updated September 13, 2026. Independent analysis compiled entirely from public documents — KDHE award announcements, the State’s Year 1 and Year 2 plan narratives, the State’s annual report to CMS, and hospital cost reports filed with CMS. Not affiliated with KDHE or CMS. This file is fully self-contained: no external connections, no data collection.</p>
+</footer>
+</main>
+</div><!--/y2-view-->
+<script>(function(){
+/* ================= YEAR 2 (PROPOSED) DATA ================= */
+var AWARD2=221898007.82;
+var f$=function(n){return "$"+Math.round(n).toLocaleString();};
+var fM=function(n){return "$"+(n/1e6).toFixed(1)+"M";};
+var fM2=function(n){return "$"+(n/1e6).toFixed(2)+"M";};
+var esc=function(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");};
+var cq=function(s){return document.querySelector(s);};
+var pct=function(n,d){return (n/d*100).toFixed(1)+"%";};
+
+/* Initiative totals — Year 2 proposed and Year 1 as restated in the Year 2 Budget Narrative five-year tables */
+var INIT2=[
+ {k:"2",name:"Init. 2: Secure Local Access to Primary Care",short:"I2 \u00b7 Local Access",y2:76638747.43,y1:97282911.69,color:"#4F719A",goal:"Substantially reduce the number of rural Kansas hospitals with negative operating margins"},
+ {k:"4",name:"Init. 4: Enable Value-Based Care",short:"I4 \u00b7 Value-Based Care",y2:61306584.28,y1:46210524.50,color:"#B5542C",goal:"100% of rural Medicare and Medicaid beneficiaries in accountable-care relationships by 2031"},
+ {k:"1",name:"Init. 1: Expand Primary & Secondary Prevention",short:"I1 \u00b7 Prevention",y2:32537853.94,y1:25560552.87,color:"#D9A441",goal:"Meaningful reductions in chronic-disease rates and avoidable hospitalizations"},
+ {k:"5",name:"Init. 5: Harness Data & Technology",short:"I5 \u00b7 Data & Tech",y2:26457307.50,y1:30854544.03,color:"#6B4E8E",goal:"Enable rural providers to engage in data sharing, telehealth, AI, and consumer-facing tech"},
+ {k:"3",name:"Init. 3: Build a Sustainable Rural Workforce",short:"I3 \u00b7 Workforce",y2:13951663.55,y1:13260371.26,color:"#2F6B4F",goal:"Improve provider-to-population ratios and ease nursing and allied-health shortages"},
+ {k:"0",name:"Administration",short:"Admin",y2:11005851.12,y1:8729103.47,color:"#8A8F98",goal:"Central program management, fiscal agent, and implementation support"}
+];
+var INITMAP={};INIT2.forEach(function(i){INITMAP[i.k]=i;});
+
+/* Program slate — Year 2 proposed ($M) with the Year 1 program budget used on the Year 1 tab ($M) */
+var PROG2=[
+ {id:"11",init:1,name:"Accountable Food is Medicine + CHW Deployment",amt:6.09,y1:1.0,owner:"KDHE",desc:"Seven Year 1 implementing organizations continue and seven more are added; K-State Extension deploys CHWs and runs the food system; Sunflower Foundation provides technical assistance; CCA provides remote patient monitoring at 14 sites.",chg:"Second cohort of 7 sites, K-State Extension and Sunflower sub-awards, BRFSS module ($80K)."},
+ {id:"12",init:1,name:"Consumer-Facing Technologies",amt:7.14,y1:5.3,owner:"CCA",desc:"CCA sub-awards KUMC for THRIVE computerized CBT ($5.65M incl. 20 additional CHWs), LEAP! brain health ($0.5M), My ALZ Journey with the Alzheimer\u2019s Association ($0.4M), a fitness/nutrition app ($0.25M), and the asynchronous Diabetes Prevention Program ($0.34M).",chg:"THRIVE nearly doubles with 20 CHWs; DPP adds 13 CDC-required video modules."},
+ {id:"13",init:1,name:"Behavioral Health Services",amt:9.69,y1:8.3,owner:"KDADS",desc:"Five projects: BH integration in 74 more primary-care practices (via Sunflower, Farley Center, HealthTeamWorks; $1.85M clinic infrastructure payments), embedded BH in 6 rural nursing facilities, ED BH intervention hubs at 6 EDs (Healthsource / ACMHCK), pediatric psychiatric access (KDHE-direct, $1.9M), and the statewide SUD network (BHNK).",chg:"Myers &amp; Stauffer ($125K) designs a Medicaid nursing-facility BH add-on payment."},
+ {id:"14",init:1,name:"Integrated Care for Dual-Eligible Beneficiaries",amt:7.48,y1:7.6,owner:"KDADS",desc:"KDADS sub-awards Bluestem PACE ($6.3M: NE Kansas expansion and a SW Kansas Frontier PACE microsite pilot) and Midland PACE ($1.0M); CCA extends AI ambient monitoring to duals who cannot enroll in PACE.",chg:"Bluestem\u2019s two projects are named; $5.5M counted toward the capital cap."},
+ {id:"15",init:1,name:"Mobile Cancer Screenings",amt:0.14,y1:0.1,owner:"CCA",desc:"KU Cancer Center mobile unit extended to 10 more rural communities at $14,400 per community.",chg:"Continuing."},
+ {id:"16",init:1,name:"Tribal Health",amt:2.00,y1:2.3,owner:"KDHE",desc:"$2.0M split equally among Prairie Band Potawatomi Nation, White Cloud Health Center, and the Kickapoo Tribe; each Tribe designs its own plan.",chg:"Recipients now named; $1.8M counted toward the capital cap."},
+ {id:"21",init:2,name:"Regional Partnerships Grant Program (RPGP)",amt:44.00,y1:50.0,owner:"KDHE",desc:"A second statewide RFA for collaborative regional projects (shared service lines, readmission reduction, clinically integrated networks). Awardees TBD.",chg:"Down $6.0M; $5.0M of the Year 1 regional pool moved to AHAP."},
+ {id:"22",init:2,name:"REH Conversion / Transformative Capital Investment",amt:11.34,y1:31.3,owner:"KDHE",desc:"A second statewide RFA for REH-conversion renovations and transformative capital investment. Awardees TBD.",chg:"Down $20.0M \u2014 the largest single reduction in the plan."},
+ {id:"23",init:2,name:"Revenue Improvement",amt:1.64,y1:5.2,owner:"CCA",desc:"Commercial rate analysis (PYA data-extraction support $258,750 + chargemaster reviews $250,000), revenue-cycle support and centralized credentialing via Healthworks KHA Foundation ($947,515), and direct-to-employer consulting ($186,000).",chg:"Year 1 stood up the rate analysis ($1.5M obligated); Year 2 adds chargemaster reviews after finding 2/3 of rural hospitals below Medicare allowable."},
+ {id:"24",init:2,name:"Anchor Hospital Advancement (AHAP)",amt:18.35,y1:10.2,owner:"CCA",desc:"CCA contracts the AHAP joint venture of urban not-for-profit systems to support 10 rural anchor hospitals: AI/EHR $9.8M, regional initiatives $5.0M, provider recruitment $2.0M, on-demand SMEs $0.4M, management fees $1.15M.",chg:"Up $8.2M; absorbs $5.0M transferred from the regional partnership pool."},
+ {id:"25",init:2,name:"Mobile Integrated Health Pilot",amt:0.67,y1:0.1,owner:"CCA",desc:"Five CMAs make home visits in five rural communities for six months from May 2027 (no current reimbursement); Oracle documentation software $200K.",chg:"Moves from design to funded salaries; Medicaid to evaluate reimbursement."},
+ {id:"26",init:2,name:"Rural Primary Care \u2013 Public Health Integration",amt:0.64,y1:0.5,owner:"KDHE",desc:"KUMC population-health team ($294,654) plus two additional local health departments at $150,000 each.",chg:"Two LHD sub-awards added (TBD)."},
+ {id:"30",init:3,name:"Overarching Initiative 3 Support",amt:0.52,y1:0,owner:"CCA",desc:"CCA contracts Healthworks for project management across workforce programs.",chg:"New line in Year 2."},
+ {id:"31",init:3,name:"Physician Pipeline",amt:6.03,y1:4.4,owner:"CCA",desc:"AHAP establishes rural residency pathways ($4,996,800; 6 FM residents at Pittsburg, 3 at Salina, psychiatry, OB, IM, and an APP residency); Kansas College of Osteopathic Medicine ($322,461); KUMC expands the Kansas Bridging Plan ($550K incentives).",chg:"Up $1.6M; AHAP becomes the residency coordinator."},
+ {id:"32",init:3,name:"Education and Training",amt:6.80,y1:7.6,owner:"KDHE",desc:"Kansas Board of Regents educational awards ($5,000 \u00d7 220 and $15,000 \u00d7 100) and $2.5M allied-health training grants ($5.74M); Kansas Dental Association rural dentistry awards ($0.71M); CCA mobile simulation lab ($0.35M).",chg:"KBOR replaces KHA as the training-grant administrator."},
+ {id:"33",init:3,name:"Recruitment and Retention",amt:0.38,y1:0.9,owner:"CCA / KDADS",desc:"Rural nurse residency and preceptor payments via CCA ($220K); BH apprenticeships via KDADS \u2192 Healthworks \u2192 Hamilton-Ryker TalentGro ($158K).",chg:"Down $0.5M as Year 1 preceptor pool winds down."},
+ {id:"34",init:3,name:"Career Exploration",amt:0.22,y1:0.6,owner:"CCA",desc:"KUMC Institute for Community Engagement expands rural HOSA chapters ($204,570); two regional career expos ($20K).",chg:"K-12 CTE fully funded in Year 1; no new Year 2 dollars."},
+ {id:"41",init:4,name:"Evidence-Based Practices",amt:42.22,y1:33.4,owner:"CCA",desc:"$21.25M Infrastructure Assistance Fund ($100K/hospital, $50K/clinic) plus quarterly pay-for-performance ($25K/hospital, $12.5K/clinic) for up to 100 hospitals and 225 clinics reporting through KHA\u2019s QHi platform ($289,485). ~$20.1M is provider incentive payments.",chg:"Up $8.8M; counts $20.1M toward the provider-payment cap."},
+ {id:"42",init:4,name:"ACO Readiness",amt:2.90,y1:3.4,owner:"CCA",desc:"Belong Health operates a shadow ACO at $44 PBPM + $5 PBPM, with $125/$75/$50 value-based activity incentives; 2\u20133 more sites, ~2,500 lives, $2.2M offset by Year 1 obligated funds.",chg:"Vendor now named (Belong Health)."},
+ {id:"43",init:4,name:"Transportation",amt:14.95,y1:8.4,owner:"KDHE / KDADS / CCA",desc:"Interfacility transport teams ($0.87M, TBD), BH crisis transport network via KDADS ($2.71M, vendor TBD), Global Medical Response non-emergency 911 ($3.25M), EMS treat-in-place reimbursement via CCA at $250/encounter ($0.91M), NEMT community grants ($3.0M, TBD), and a trauma program: Pulsara platform ($2.69M) plus $1.49M KDHE d
