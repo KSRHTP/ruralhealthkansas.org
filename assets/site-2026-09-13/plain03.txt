@@ -1,0 +1,163 @@
+ime</div><div class="v serif">$108.1M</div><div class="s">48.7% of the plan</div></div></div>
+<div class="y1summary"><a href="#" class="go goto" data-view="cca" data-target="#cca-kpis">Open the CCA track →</a><span class="sub" style="margin:0">Dollars by year, program footprint, downstream partners, the 87-hospital roster and map, and the CCA watchlist.</span></div>
+</section>
+<section class="card" id="impl">
+<h2 class="serif" id="jump-impl">Implementation spotlight: anchor-hospital programs (KHA June 2026 update)</h2>
+<div class="sub">The Anchor Hospital Advancement Program (AHAP) and aligned workforce and technology programs are moving into execution. Latest detail from the Kansas Hospital Association June update, mapped to the 24-program slate above.</div>
+<div class="icards">
+<div class="icard rpm">
+<div class="itag">Program 51 · Initiative 5 · Execution</div>
+<h3>Remote Patient Monitoring</h3>
+<p>Wearable-based monitoring of vital signs — heart rate, respiratory rate, skin temperature, plus activity, body position, gait, and sleep — to lift engagement, cut readmissions, and enable continuous real-time care across rural sites.</p>
+<div class="pilot"><b>Pilot cohort — go-live August 2026:</b><ul class="mini"><li>Newman Regional Health — Emporia (Lyon County) · independent</li><li>Labette Health — Parsons (Labette County) · independent</li></ul><div class="meta">All anchor sites live by May 2027.</div></div>
+</div>
+<div class="icard res">
+<div class="itag">Program 31 · Initiative 3 · Agreements</div>
+<h3>Rural Track Residency</h3>
+<p>Expands Kansas graduate medical education capacity through anchor-hospital training pathways and academic partners — KUMC Wichita, KUMC Kansas City, and Salina / Smoky Hill — over five years.</p>
+<ul class="mini"><li><b>~17 new rural residents</b> across <b>6 anchor site areas</b> in Year 1</li><li>Build: site development, faculty recruitment and development, ACGME applications</li><li>Timeline: early summer → late fall 2026 (launch &amp; governance, site readiness, recruitment, expansion)</li></ul>
+</div>
+<div class="icard ai">
+<div class="itag">Program 24 · Initiative 2 · AHAP · Execution</div>
+<h3>AI in the EMR</h3>
+<p>The AHAP board is directing AI to resolve technology and infrastructure inefficiencies at anchor sites and statewide, targeting access and affordability, capacity, and rural economic drivers of health.</p>
+<ul class="mini"><li>EMR optimization</li><li>Transitions of care</li><li>Workforce development</li><li>Revenue-cycle management</li><li>Specialty coverage / telemedicine</li></ul>
+</div>
+</div>
+<div class="sub" style="margin-top:10px">Source: Kansas Hospital Association (KHA) RHTP June 2026 update. These sit beneath the 24-program slate (RPM = program 51, Physician Pipeline = program 31, Anchor Hospital Advancement = program 24).</div>
+</section>
+<section class="card">
+<h2 class="serif" id="jump-map">The map: where award dollars land</h2>
+<div class="sub">All 66 named awards, contracted implementations, and budget-narrative contracts are represented. Kansas recipient headquarters are plotted directly; statewide or mixed-location implementations use an administrative or service-area plotting point and are labeled accordingly.</div>
+<div id="ksmap"></div>
+<div class="mapinfo" id="mapinfo"><span style="font-size:12px;color:var(--mut)">Hover or tap a dot to see recipients. Wichita, Topeka, and Kansas City dots are organization headquarters — the programs they fund largely operate in rural and frontier counties.</span></div>
+</section>
+<section class="card" style="padding:0">
+<div style="padding:18px 18px 10px">
+<h2 class="serif" id="jump-pipeline">The full pipeline: every named Year 1 program</h2>
+<div class="sub" id="pipesub" style="margin-bottom:0"></div>
+<div class="filters" id="statuschips"></div>
+<div class="statusbar" id="statusbar"></div>
+</div>
+<div class="table-scroll"><table id="pipetable"></table></div>
+</section>
+<section class="cols">
+<div class="card">
+<h2 class="serif" id="jump-geo">Who gets it: urban, rural, frontier</h2>
+<div class="sub">Recipient HQ county · FORHP/RUCA, frontier = under 6 persons/sq mi</div>
+<div id="donut" style="display:flex;justify-content:center"></div>
+<div class="legend" id="geolegend"></div>
+</div>
+<div class="card ink-card" style="display:flex;flex-direction:column;justify-content:center">
+<div class="eyebrow">What the numbers say</div>
+<p style="font-size:15px;line-height:1.6;color:#F4F0E6">The Where It Lands view now includes both competitive awards and named contracted implementations. Headquarters or administrative location is not the same as service area; statewide contracted programs may serve rural providers even when administered from an urban or mixed-location organization.</p>
+</div>
+</section>
+<section class="card" id="orgcard">
+<h2 class="serif">Who got it, by organization type</h2>
+<div class="sub">All 66 named awards, contracted implementations, and budget-narrative contracts classified by provider type, organization type, and implementation role. Hover or tap a slice to see the recipients and contractors behind it.</div>
+<div class="orgwrap">
+<div id="orgdonut"></div>
+<div class="mapinfo" id="orgpanel" style="flex:1;min-height:200px"></div>
+</div>
+</section>
+<section class="card" style="padding:0">
+<div style="padding:18px 18px 10px">
+<h2 class="serif" id="jump-awards">All 66 named awards, contracted implementations, and budget-narrative contracts</h2>
+<div class="filters">
+<span id="progchips"></span>
+<span style="width:1px;height:20px;background:#C9C2B4;margin:0 8px"></span>
+<span id="geochips"></span>
+<input class="search" id="q" placeholder="Search recipients, counties, projects…"/>
+</div>
+<div class="count" id="count"></div>
+</div>
+<div class="table-scroll"><table id="awardtable"></table></div>
+</section>
+<section class="card" id="y1-recon">
+<h2 class="serif">Annual Report check — how the Year 1 dataset was reconciled to the State’s CMS filing</h2>
+<div class="sub">Cross-check of the tracked awards and contracts against the State’s CMS Annual Report workbook (Use of Funds tab, 2,500 obligation rows; First-Tier Entities tab) and Year 1 references in the Year 2 Budget Narrative. The rows below are named entities with Year 1 obligations that the award dataset previously carried only at program level, under a different amount, or not at all. On September 6, 2026 they were folded into the tracked records above as CMS-approved budget-narrative contracts, on KDHE’s guidance that inclusion in the accepted budget narrative constituted approval and no RFP was required. The pipeline lines they correct were updated at the same time.</div>
+<div class="flags">
+<div class="flag"><b>Announced ≠ obligated.</b> The $81.2M of RPGP and REH/CAP awards announced May 30, 2026 and the $1.0M of CHW + A-FIM awards do not appear as obligations anywhere in the Annual Report — agreements were not executed by the reporting period. Initiative 2’s only recorded Year 1 obligation is CCA’s $16.1M.</div>
+<div class="flag"><b>The Downstream Reporting tab is empty.</b> The workbook’s second-tier form (parent entity → downstream recipient → dollars committed) contains headers only. The State reported no downstream recipients for any first-tier entity, including CCA’s $101.3M and KDADS’s $17.7M.</div>
+</div>
+<div class="legend2" style="margin-top:6px"><span><span class="rk miss">folded in — was absent</span> now a named record</span><span><span class="rk prog">folded in — program corrected</span> entity added and pipeline amount/status updated</span><span><span class="rk tbd">folded in — itemized</span> pulled out of a larger obligation line</span></div>
+<div class="table-scroll" style="margin-top:8px"><table id="y1-recontable"></table></div>
+<div class="sub" id="y1-reconnote" style="margin-top:8px"></div>
+</section>
+<script>(function(){
+var R=[
+ ["Boston Consulting Group","Admin · implementation support (KDHE)",4750000,3437500,"miss","Not in the tracked records. The single largest Year 1 spender.","Annual Report KS2"],
+ ["BDO Government Services","Admin · fiscal agent (KDHE)",2329929,776643,"miss","Not in the tracked records.","Annual Report; First-Tier Entities"],
+ ["Healthworks KHA Foundation","I2 · Revenue Cycle Support & Centralized Credentialing Organization (via CCA)",3605843,0,"prog","Tracked only through its downstream HSC credentialing pilot ($980K). Year 2 narrative: Healthworks contracted a revenue-cycle team for $1.8M in Year 1.","Annual Report KS13; Y2 BN p. 25"],
+ ["PYA, P.C.","I2 · statewide commercial rate analysis (via CCA)",1500000,0,"prog","Dollars tracked in the Revenue Improvement line; contractor never named on this tab.","Annual Report KS12"],
+ ["Alzheimer\u2019s Association \u2014 My ALZ Journey","I1 · consumer-facing technologies (via CCA)",2500000,0,"miss","Absent from the pipeline entirely. Year 2 adds $400K to complete the tool.","Annual Report; Y2 BN p. 15"],
+ ["Belong Health","I4 · ACO Readiness shadow ACO (via CCA)",3400000,500000,"prog","Tracked as \u201cContractor TBD.\u201d Year 2 narrative names Belong Health as the vendor CCA presently contracts; $500K already disbursed.","Annual Report KS38; Y2 BN p. 37"],
+ ["Sunflower Foundation (\u2192 Farley Health Policy Center, HealthTeamWorks)","I1 · behavioral-health integration in primary care (via KDADS)",3020381,0,"prog","Tracked at $2.82M program level; sub-awardee and its two contractors not named.","Annual Report; Y2 BN pp. 15\u201316"],
+ ["Behavioral Health Network of Kansas","I1 · statewide SUD referral network (via KDADS)",1427999,0,"prog","Tracked at $600K; obligation is $1.27M operations + $160K provider payments; operator not named.","Annual Report; Y2 BN p. 20"],
+ ["Bluestem PACE; Midland Care (Midland PACE)","I1 · dual-eligible PACE expansion (via KDADS)",7604172,0,"prog","Tracked at $6.0M \u201cPlanned\u201d; the two PACE providers are not named. Midland Care already appears on this tab as a PrairieLINK partner, not as a recipient. Year 2 names Bluestem ($6.3M) and Midland ($1.0M).","Annual Report; Y2 BN p. 21"],
+ ["Rural residency pathways \u2014 Kansas College of Osteopathic Medicine + AHAP (via CCA)","I3 · Rural Residency Program",8500000,0,"prog","Tracked at $2.5M \u201cPlanned\u201d \u2014 a $6.0M undercount against the obligation. Year 2 names KSCOM ($322K) and AHAP ($5.0M).","Annual Report; Y2 BN pp. 30\u201331"],
+ ["Direct-to-employer consultant (Executive Level II rate)","I2 · Revenue Improvement (via CCA)",114000,0,"tbd","Inside the Revenue Improvement line; not itemized. Year 2: $186K.","Annual Report KS14"],
+ ["Healthworks / KHA \u2014 central workforce support","I3 · overarching Initiative 3 project management (via CCA)",255548,0,"tbd","Not itemized. Year 2: $518K.","Annual Report"],
+ ["CCA administrative contract","Admin · grant-assistance services",1085321,542660,"tbd","Not itemized on this tab; $108,532/month in Year 2.","Annual Report KS5"],
+ ["Oracle Clinical AI \u2014 10 non-GPHA rural sites","I5 · Emerging Technology (via CCA; inside the $12.76M obligation)",0,0,"tbd","Only the GPHA/Oracle contract ($5.96M) is tracked; the separate Oracle contract for 10 non-GPHA sites is referenced in Year 2 but never itemized. Year 2 renewal: $935K.","Y2 BN p. 46"]
+];
+var f$=function(n){return "$"+Math.round(n).toLocaleString();};
+var lab={miss:"folded in \u2014 was absent",prog:"folded in \u2014 program corrected",tbd:"folded in \u2014 itemized"};
+var h='<thead><tr><th>Entity</th><th>Program (first-tier prime)</th><th class="r">Y1 obligated</th><th class="r">Y1 disbursed</th><th>Tracker status</th><th>Note</th><th>Source</th></tr></thead><tbody>';
+var tot=0;R.forEach(function(r){tot+=r[2];h+='<tr><td style="min-width:200px;font-weight:600">'+r[0]+'</td><td style="font-size:12px">'+r[1]+'</td><td class="pamt">'+(r[2]?f$(r[2]):'\u2014')+'</td><td class="pamt" style="color:var(--mut)">'+(r[3]?f$(r[3]):'$0')+'</td><td><span class="rk '+r[4]+'">'+lab[r[4]]+'</span></td><td style="font-size:12px;color:#3d4650;min-width:240px">'+r[5]+'</td><td style="font-size:11px;color:var(--mut);white-space:nowrap">'+r[6]+'</td></tr>';});
+document.getElementById("y1-recontable").innerHTML=h+'</tbody>';
+document.getElementById("y1-reconnote").innerHTML='<b>'+f$(tot)+'</b> of Year 1 obligations with named entities were reconciled; all but the un-itemized Oracle non-GPHA contract are now in the tracked records above (Healthworks net of the HSC pilot). Amounts are obligations reported by the State for the first reporting period, not payments: only $5.5M of the $221.9M award had been disbursed. Program names follow the workbook; \u201cMedicare Provider Incentive Payment Program\u201d there corresponds to the Medicaid Provider Incentive line on this tab.';
+})();</script>
+<section class="card" id="cin-summary">
+<h2 class="serif">Clinically integrated networks — Year 1 snapshot</h2>
+<div class="sub">Three networks now sit on the CIN track. The newest, <b style="color:#1B8A5A">Astra Health</b> (Sept 8, 2026), is a shared-services organization formed by Amberwell Health, LMH Health, Newman Regional Health, Salina Regional Health Center, and The University of Kansas Health System, funded by a $932,310 Year 1 RPGP award held by Salina Regional and set to manage KCIC, the KU-affiliated 51-hospital rural ACO. Two CINs took shape earlier under Year 1 awards: the <b style="color:var(--sky)">Kansas High Value Network</b> (7 charter independent rural hospitals; several members won individual REH/CAP grants) and <b style="color:var(--clay)">PrairieLINK Health Alliance</b> (5 hospitals led by Stormont Vail; a single RPGP partnership award). Member financials, maps, awards by network, the plan’s joint-negotiation language, and the Year 2 CIN-capacity dollars are consolidated on the CIN track.</div>
+<div class="y1summary"><a href="#" class="go goto" data-view="cin" data-target="#cin-kpis">Open the CIN track →</a><span class="sub" style="margin:0">Kansas High Value Network · PrairieLINK · Astra Health · the Care Collaborative as a CIN · rate-analysis milestones · watchlist.</span></div>
+</section>
+
+<section class="card">
+<h2 class="serif" id="jump-oversight">Oversight &amp; accountability timeline</h2>
+<div class="sub">Every public oversight touchpoint, from federal award to state legislative reporting, plus the political calendar that frames it. Gold = complete through Aug. 13, 2026 · green = State Finance Council · clay outline = electoral/legislative dates. SFC reporting per council records, June 3, 2026.</div>
+<div class="tl" id="timeline"></div>
+</section>
+<section class="card ink-card" id="jump-watchlist">
+<div class="eyebrow">The transparency watchlist — what the public cannot yet see</div>
+<div class="gaps" id="gaps"></div>
+<div class="dates">Key dates: July 31, 2026 (reporting period closes) · Aug 30, 2026 (Annual Report + BP2 funding request) · Oct 30, 2026 (Budget Period 1 ends) · Oct 31, 2026 (BP2 funding announced) · Nov 3, 2026 (midterm &amp; gubernatorial election) · Jan 11, 2027 (Legislature convenes) · Sept 30, 2027 (BP1 spend deadline)</div>
+</section>
+<footer>
+<b>Sources &amp; method</b>
+<p>CMS Notice of Award (Dec 29, 2025): $221,898,007.82, sixth-highest of all states. KDHE RHTP Budget Revision 1 v2 (May 12, 2026). KDHE REH/CAP &amp; RPGP Award Winners (May 30, 2026): 39 awards totaling $79,013,347 in the original announcement; the later Flint Hills REH/CAP award brings those two grant programs to 40 awards totaling $81,193,347. Seven CHW + Accountable Food Is Medicine awards announced August 13, 2026 total $1,007,152. Named contracted implementations included in the recipient-flow total are Thrive ($6,600,000), remote inpatient/post-acute monitoring ($9,750,000), Oracle Health Ambient Listening ($5,964,000), BioSTL/KHI facilitation ($830,000), and Anchor Hospital AI/EHR Optimization ($10,100,000), and the HSC Centralized Credentialing Verification Pilot (up to $980,000 in Year 1, contingent upon required reviews). Together, the Where It Lands dataset contains 66 tracked award and contract records totaling $155,537,692. On September 6, 2026 the dataset was expanded with 13 contracts ($39,113,193) drawn from the State’s CMS Annual Report obligations and the Year 2 Budget Narrative — Boston Consulting Group, BDO, the CCA administrative contract, Healthworks KHA Foundation, PYA, Belong Health, the Alzheimer’s Association, Sunflower Foundation, the Behavioral Health Network of Kansas, Bluestem PACE and Midland Care, the CCA rural-residency pathway, and the direct-to-employer consultant — on KDHE’s guidance that inclusion in the CMS-accepted budget narrative constituted approval, so these were not put to RFP. Healthworks is shown net of the HSC pilot to avoid double counting. Pipeline and program status reflect public documents and working updates through August 27, 2026. Headquarters or administrative location is not the same as service area; statewide or mixed-location implementations are labeled accordingly. Geography reflects recipient headquarters county under FORHP/RUCA convention, with a frontier overlay for counties under 6 persons per square mile. Authority: H.R.1 §71401, One Big Beautiful Bill Act (July 4, 2025).</p>
+<p style="margin-top:8px">Public edition. Updated September 13, 2026. Independent analysis compiled entirely from public documents — KDHE award announcements, the State’s Year 1 and Year 2 plan narratives, the State’s annual report to CMS, and hospital cost reports filed with CMS. Not affiliated with KDHE or CMS. This file is fully self-contained: no external connections, no data collection.</p>
+</footer>
+</main>
+</div><!--/ks-view-->
+<div id="y2-view" style="display:none">
+<header><div class="wrap">
+<div class="eyebrow">Year 2 · Proposed Plan · Budget Period 2 <span class="y2badge">Proposed</span></div>
+<h1 class="serif">Kansas Rural Health Transformation Program — Year 2</h1>
+<p>The State’s proposed Year 2 plan, submitted to CMS in August 2026 for Budget Period 2 (October 31, 2026 – October 30, 2027). The topline holds at $221.9 million — identical in every one of the five performance years — but the mix shifts: capital-heavy access grants recede, value-based care and prevention expand, and 48.7% of the program is routed through a single University of Kansas Health System subsidiary. Parsed from the Year 2 Budget Narrative (50 pp.) and Year 2 Project Narrative (95 pp.), with Year 1 actuals from the State’s CMS Annual Report workbook. Nothing on this tab is awarded or obligated yet.</p>
+<div class="last-updated">Updated September 13, 2026 · Proposed figures, pending CMS approval by October 31, 2026</div>
+<div class="y2nav">
+<a href="#y2-kpis">Overview</a><a href="#y2-change">What changed vs. Year 1</a><a href="#y2-budget">Budget</a><a href="#y2-payer">Prices &amp; contracting</a><a href="#y2-initiatives">Initiatives</a><a href="#y2-programs">Programs</a><a href="#y2-awards">Named recipients</a><a href="#y2-cins">CINs</a><a href="#y2-watchlist">Watchlist</a><a href="#y2-sources">Sources</a>
+</div>
+</div></header>
+<main>
+<section class="grid4" id="y2-kpis"></section>
+
+<section class="cols">
+<div class="card">
+<h2 class="serif" id="y2-jump-assigned">How the $221.9M is assigned</h2>
+<div class="sub">Share of the proposed Year 2 budget, measured two ways: dollars that already have a named recipient at any tier, and dollars administered by the Care Collaborative Association (CCA) as first-tier prime.</div>
+<div class="silos" id="y2-silos"></div>
+</div>
+<div class="card">
+<h2 class="serif" id="y2-budget">Where the $221.9M is budgeted</h2>
+<div class="sub">Proposed Year 2 allocation across Kansas’s five initiatives plus central administration, per the Kansas RHT Plan Year 2 Budget Narrative (August 2026). Initiatives plus admin reconcile to $221,898,007.82.</div>
+<div id="y2-initbars"></div>
+</div>
+</section>
+
+<section class="card" id="y2-change">
+<h2 class="serif">What changed from Year 1 to Year 2</h2>
+<div class="sub">Grey bars are the Year 1 figures a
