@@ -1,0 +1,172 @@
+t==="tbd"&&!r.tbd)return false;if(awStat==="pay"&&!r.pay)return false;return true;});
+ rows.sort(function(a,b){var va=a[awSort],vb=b[awSort];if(typeof va==="string"){va=va.toLowerCase();vb=String(vb).toLowerCase();return awDesc?(va<vb?1:-1):(va<vb?-1:1);}return awDesc?vb-va:va-vb;});
+ var sum=rows.reduce(function(s,r){return s+r.amt;},0),maxAmt=Math.max.apply(null,Y2ROWS.map(function(r){return r.amt;}));
+ var h='<thead><tr><th data-s="r">Recipient / pool</th><th data-s="v">Vehicle</th><th data-s="init">Initiative</th><th data-s="prime">Prime</th><th class="r" data-s="amt">Year 2 $</th><th>Notes</th></tr></thead><tbody>';
+ rows.forEach(function(r){var w=Math.max(1,r.amt/maxAmt*100);h+='<tr'+(r.tbd?' class="tbdrow"':'')+'><td style="min-width:240px">'+r.r+(r.tbd?' <span class="tbdpill">TBD</span>':'')+(r.pay?' <span class="paypill">prices</span>':'')+'</td><td style="white-space:nowrap">'+r.v+'</td><td style="white-space:nowrap">'+INITLABEL[r.init]+'</td><td><span class="ownb">'+r.prime+'</span></td><td class="pamt" style="white-space:nowrap">'+f$(r.amt)+'<div class="abar"><i style="width:'+w+'%"></i></div></td><td style="font-size:12px;color:#3d4650;min-width:260px">'+r.note+'</td></tr>';});
+ var t=cq("#y2-awtable");if(t){t.innerHTML=h+'</tbody>';t.querySelectorAll("th[data-s]").forEach(function(th){th.style.cursor="pointer";th.addEventListener("click",function(){var k=th.dataset.s;if(awSort===k)awDesc=!awDesc;else{awSort=k;awDesc=(k==="amt");}renderAw();});});}
+ if(cq("#y2-awcount"))cq("#y2-awcount").innerHTML='<b>'+rows.length+'</b> rows shown · <b>'+f$(sum)+'</b> ('+pct(sum,AWARD2)+' of the plan)';}
+renderAw();
+if(cq("#y2-awnote"))cq("#y2-awnote").innerHTML='Recipient rows total '+f$(totalRows)+' of the $221,898,008 plan; the remainder is KDHE internal personnel, fringe, travel, supplies, and indirect. Of the total, <b>'+fM(tbdTotal)+' ('+pct(tbdTotal,AWARD2)+')</b> has no named end recipient: two statewide RFAs ($55.3M), the $10.0M CCA technology implementation pool, $4.0M for non-Oracle ambient tools, transportation and trauma pools, HDU/HIE contracts, and unnamed vendors. Source: Kansas RHT Plan Year 2 Budget Narrative, August 2026.';
+
+/* ===== Watchlist ===== */
+if(cq("#y2-gaps"))cq("#y2-gaps").innerHTML=[
+ [fM(tbdTotal)+" with no named recipient","Two statewide RFAs (RPGP $44.0M, REH/CAP $11.3M) plus CCA-held pools ($10.0M technology implementation, $4.0M ambient tools), transportation and trauma pools, and HDU/HIE contracts — "+pct(tbdTotal,AWARD2)+" of the plan awaits a name."],
+ ["Announced ≠ obligated ≠ spent","The CMS Annual Report shows $127.0M obligated and $5.5M disbursed for Year 1; the $81.2M of RPGP/REH-CAP awards announced May 30 are not yet recorded as obligations. Year 1 money must be spent by Sept 30, 2027."],
+ [fM(ccaTotal)+" through one KU Health System subsidiary","CCA is prime for "+pct(ccaTotal,AWARD2)+" of Year 2, selects its own sub-awardees, and earns $108,532/month. Recipient-level visibility beneath CCA depends on what the State chooses to publish."],
+ ["The rate-analysis report","PYA’s statewide commercial-rate benchmark (due Q3 2027) is the foundation the plan names for joint negotiation through CINs. Whether the report, its methodology, and its hospital-level results become public is undetermined."],
+ ["$30.7M for “currently non-reimbursable” services","92% of the provider-payment cap funds services the plan intends to transition to private insurance and Medicaid (sustainability approaches throughout the Project Narrative) — costs that move to premiums and the state budget after the grant ends."],
+ ["Out-year pools: $342.9M in “Other”","Years 3–5 carry $115.4M, $122.3M, and $105.2M in the unallocated “Other” category. Annual CMS re-approval is required; the recipients of those dollars do not yet exist on paper."]
+].map(function(g){return '<div><b>'+g[0]+'</b><div>'+g[1]+'</div></div>';}).join("");
+window.RHTP=Object.assign(window.RHTP||{},{Y2ROWS:Y2ROWS,Y1ACT:Y1ACT,PAY:PAY,PAYTL:PAYTL,PROG2:PROG2,INIT2:INIT2,AWARD2:AWARD2});
+})();</script>
+
+<div id="cca-view" style="display:none">
+<header><div class="wrap">
+<div class="eyebrow">Cross-year track · follows one actor across every program year</div>
+<h1 class="serif">The Care Collaborative Association (CCA)</h1>
+<p>A wholly owned subsidiary of the University of Kansas Hospital Authority (The University of Kansas Health System), built in 2014 with a $12.4 million CMS Innovation Center award as a rural clinically integrated network. It is the first-tier prime for roughly half of every Kansas RHTP program year, selects its own sub-awardees, and earns a flat monthly administrative fee. This track is computed live from the Year 1 and Year 2 datasets: when a new program year is added, the figures below update themselves.</p>
+<div class="last-updated" style="background:#FFD84D;color:#3a2c08;border-color:#C9A227">Computed from the year tabs · refreshed with each dataset update</div>
+<div class="y2nav">
+<a href="#cca-kpis">Overview</a><a href="#cca-years">Dollars by year</a><a href="#cca-who">Who they are</a><a href="#cca-foot">Program footprint</a><a href="#cca-roster">Participants &amp; map</a><a href="#cca-watch">Watchlist</a><a href="#cca-src">Sources</a>
+</div>
+</div></header>
+<main>
+<section class="grid4" id="cca-kpis"></section>
+
+<section class="card" id="cca-years">
+<h2 class="serif">Dollars by program year</h2>
+<div class="sub">One row per year, reading across the award period. Year 1 shows three states of the same money — named on this tracker, obligated by the State, and actually disbursed; Year 2 is the proposed plan. Years 3–5 populate when those plans are filed.</div>
+<div class="ystrip" id="cca-ystrip"></div>
+<div class="sub" id="cca-ynote" style="margin-top:10px"></div>
+</section>
+
+<section class="card" id="cca-who">
+<h2 class="serif">Who they are — in the State’s own words</h2>
+<div class="pq"><span class="q">“In 2014, the CMS Innovation Center awarded the University of Kansas Health System (TUKHS), the state’s only academic medical center, $12.4 million to build and operate a rural clinically integrated network. Originally comprised of 13 rural hospitals, the network, known as the Care Collaborative, now includes 91 provider organizations across 79 of Kansas’ 105 counties. This includes hospitals in 72 of the 75 rural Kansas counties with hospitals, along with their affiliated clinics.”</span><span class="cite">— Year 2 Project Narrative, p. 5</span></div>
+<div class="pq"><span class="q">“CCA, which is a wholly owned subsidiary of the University of Kansas Hospital Authority (d/b/a The University of Kansas Health System (TUKHS)), was selected to provide services based on proven leadership in rural health initiatives, strong working relationships with rural providers statewide, and engagement in Plan development.”</span><span class="cite">— Year 2 Budget Narrative, p. 6</span></div>
+<div class="pq"><span class="q">“CCA’s contract with KDHE is structured as a deliverables-based agreement with a flat monthly fee to perform the defined scope of work. The monthly fee is $108,532.08 in Year 2.”</span><span class="cite">— Year 2 Budget Narrative, p. 6</span></div>
+<div class="grid4" style="margin-top:14px">
+<div class="card kpi"><div class="k">Parent</div><div class="v serif" style="font-size:17px">KU Health System</div><div class="s">University of Kansas Hospital Authority</div></div>
+<div class="card kpi"><div class="k">Origin</div><div class="v serif">2014</div><div class="s">$12.4M CMMI rural CIN award; 13 founding hospitals</div></div>
+<div class="card kpi"><div class="k">Executives on RHTP</div><div class="v serif" style="font-size:17px">Moser · Ross</div><div class="s">Dr. Robert Moser (former KDHE Secretary) and Martie Ross, JD, full time</div></div>
+<div class="card kpi"><div class="k">Network today</div><div class="v serif">91 / 79</div><div class="s">provider organizations / counties covered</div></div>
+</div>
+<div class="sub" style="margin-top:10px">The same organization is therefore three things at once: the program’s dominant administrator, a clinically integrated network in its own right, and the entity that runs the rate analysis the plan calls the foundation for joint negotiation through CINs. As of September 8, 2026 its parent is also a founding member of Astra Health, which will manage KCIC — the 51-hospital rural ACO the KU Health System describes as its own. <a href="#" class="goto" data-view="cin" data-target="#cin-kpis" style="color:var(--sky);font-weight:600">Open the CIN track →</a></div>
+</section>
+
+<section class="card" id="cca-foot">
+<h2 class="serif">Program footprint — every line routed through CCA, by year</h2>
+<div class="sub">Left: Year 1 named records on this tracker that route through CCA (tagged <code>via: CCA</code> in the Year 1 dataset). Right: every Year 2 line where CCA is first-tier prime. Both lists are filtered live from the year datasets; downstream partners appear in the row names.</div>
+<div class="cols" style="align-items:start">
+<div><h3 class="serif" style="font-size:15px;margin:0 0 6px">Year 1 · named records via CCA <span id="cca-y1sum" style="color:var(--mut);font-weight:400"></span></h3><div class="table-scroll"><table id="cca-y1table"></table></div></div>
+<div><h3 class="serif" style="font-size:15px;margin:0 0 6px">Year 2 · proposed lines with CCA as prime <span id="cca-y2sum" style="color:var(--mut);font-weight:400"></span></h3><div class="table-scroll"><table id="cca-y2table"></table></div></div>
+</div>
+<h3 class="serif" style="font-size:15px;margin:16px 0 4px">Named downstream partners across years</h3>
+<div class="sub" id="cca-partners"></div>
+</section>
+
+<section class="card" id="cca-roster">
+<h2 class="serif">Participating hospitals &amp; clinics — roster and map</h2>
+<div class="sub">The July KHA RHTP update slide identifies 87 participating hospitals and 202 participating clinics. The hospital roster has been reconciled and verified at 87 participating hospitals. Map markers are approximate city-level locations for visualization only, not verified street addresses.</div>
+<div class="grid4" style="margin-bottom:14px"><div class="card kpi"><div class="k">Source-declared hospitals</div><div class="v serif">87</div><div class="s">From KHA July RHTP update slide</div></div><div class="card kpi"><div class="k">Verified names listed</div><div class="v serif">87</div><div class="s">Unique hospital names verified</div></div><div class="card kpi"><div class="k">Participating clinics</div><div class="v serif">202</div><div class="s">Source-declared clinic count</div></div><div class="card kpi"><div class="k">QA status</div><div class="v serif" style="font-size:18px">Closed</div><div class="s">Hospital roster reconciled</div></div></div>
+<div class="cols" style="align-items:start"><div><h3 class="serif" style="font-size:15px;margin:0 0 6px">Hospital roster</h3><ol style="columns:1;margin-left:22px;font-size:12.5px;line-height:1.55;color:#3d4650">
+<li>AdventHealth Ottawa <span style="color:var(--mut)">(Ottawa)</span></li>
+<li>AmberMed-Sheridan County Hospital <span style="color:var(--mut)">(Hoxie)</span></li>
+<li>Amberwell Health Atchison Association <span style="color:var(--mut)">(Atchison)</span></li>
+<li>Amberwell Health-Wathena Hospital Association <span style="color:var(--mut)">(Wathena)</span></li>
+<li>Ascension Medical Group Via Christi, PA Wichita - Wellington <span style="color:var(--mut)">(Wellington)</span></li>
+<li>Ashland Health Center <span style="color:var(--mut)">(Ashland)</span></li>
+<li>Caldwell Regional Medical Center <span style="color:var(--mut)">(Caldwell)</span></li>
+<li>Cheyenne County Hospital <span style="color:var(--mut)">(St. Francis)</span></li>
+<li>Citizens Medical Center <span style="color:var(--mut)">(Colby)</span></li>
+<li>Clay County Medical Center <span style="color:var(--mut)">(Clay Center)</span></li>
+<li>Coffey County Hospital <span style="color:var(--mut)">(Burlington)</span></li>
+<li>Coffeyville Regional Medical Center <span style="color:var(--mut)">(Coffeyville)</span></li>
+<li>Comanche County Hospital <span style="color:var(--mut)">(Coldwater)</span></li>
+<li>Community Hospital-Onaga &amp; St. Mary's Campus <span style="color:var(--mut)">(Onaga)</span></li>
+<li>Decatur Health System <span style="color:var(--mut)">(Oberlin)</span></li>
+<li>Edwards County Medical Center <span style="color:var(--mut)">(Kinsley)</span></li>
+<li>Ellsworth County Medical Center <span style="color:var(--mut)">(Ellsworth)</span></li>
+<li>F.W. Huston Medical Center <span style="color:var(--mut)">(Winchester)</span></li>
+<li>Fredonia Regional Hospital <span style="color:var(--mut)">(Fredonia)</span></li>
+<li>Freeman Fort Scott Hospital <span style="color:var(--mut)">(Fort Scott)</span></li>
+<li>Girard Medical Center <span style="color:var(--mut)">(Girard)</span></li>
+<li>Goodland Regional Medical Center <span style="color:var(--mut)">(Goodland)</span></li>
+<li>Gove County Medical Center <span style="color:var(--mut)">(Quinter)</span></li>
+<li>Graham County Hospital <span style="color:var(--mut)">(Hill City)</span></li>
+<li>Greeley County Health Services <span style="color:var(--mut)">(Tribune)</span></li>
+<li>Greenwood County Hospital <span style="color:var(--mut)">(Eureka)</span></li>
+<li>Grisell Memorial Hospital <span style="color:var(--mut)">(Ransom)</span></li>
+<li>Hanover Hospital <span style="color:var(--mut)">(Hanover)</span></li>
+<li>Hays Medical Center <span style="color:var(--mut)">(Hays)</span></li>
+<li>Hodgeman County Health Center <span style="color:var(--mut)">(Jetmore)</span></li>
+<li>Holton Community Hospital <span style="color:var(--mut)">(Holton)</span></li>
+<li>Hospital District No. 1 of Dickinson County - Memorial Health System <span style="color:var(--mut)">(Abilene)</span></li>
+<li>Hospital District No. 6 of Harper County Kansas (Patterson Health Center) <span style="color:var(--mut)">(Anthony)</span></li>
+<li>Hutchinson Regional Medical Center <span style="color:var(--mut)">(Hutchinson)</span></li>
+<li>Kearny County Hospital <span style="color:var(--mut)">(Lakin)</span></li>
+<li>Kingman Healthcare Center <span style="color:var(--mut)">(Kingman)</span></li>
+<li>Kiowa County Memorial Hospital - Greensburg <span style="color:var(--mut)">(Greensburg)</span></li>
+<li>Kiowa District Hospital <span style="color:var(--mut)">(Kiowa)</span></li>
+<li>Labette Health - Labette County Medical Center <span style="color:var(--mut)">(Parsons)</span></li>
+<li>Labette Health Independence Healthcare Center - Labette County Medical Center <span style="color:var(--mut)">(Independence)</span></li>
+<li>Lane County Hospital <span style="color:var(--mut)">(Dighton)</span></li>
+<li>Lincoln County Hospital <span style="color:var(--mut)">(Lincoln)</span></li>
+<li>Lindsborg Community Hospital <span style="color:var(--mut)">(Lindsborg)</span></li>
+<li>Logan County Hospital <span style="color:var(--mut)">(Oakley)</span></li>
+<li>McPherson Hospital, Inc. <span style="color:var(--mut)">(McPherson)</span></li>
+<li>Meade District Hospital <span style="color:var(--mut)">(Meade)</span></li>
+<li>Medicine Lodge Memorial Hospital <span style="color:var(--mut)">(Medicine Lodge)</span></li>
+<li>Mercy Hospital - Moundridge <span style="color:var(--mut)">(Moundridge)</span></li>
+<li>Miami County Medical Center, Inc. <span style="color:var(--mut)">(Paola)</span></li>
+<li>Minneola District Hospital <span style="color:var(--mut)">(Minneola)</span></li>
+<li>Mitchell County Hospital Health Systems <span style="color:var(--mut)">(Beloit)</span></li>
+<li>Morris County Hospital <span style="color:var(--mut)">(Council Grove)</span></li>
+<li>Morton County Health System <span style="color:var(--mut)">(Elkhart)</span></li>
+<li>Nemaha Valley Community Hospital <span style="color:var(--mut)">(Seneca)</span></li>
+<li>Neosho Memorial Regional Medical Center <span style="color:var(--mut)">(Chanute)</span></li>
+<li>Ness County Hospital District #2 <span style="color:var(--mut)">(Ness City)</span></li>
+<li>Newman Regional Health <span style="color:var(--mut)">(Emporia)</span></li>
+<li>North Central Kansas Medical Center <span style="color:var(--mut)">(Concordia)</span></li>
+<li>Norton County Hospital <span style="color:var(--mut)">(Norton)</span></li>
+<li>Osborne County Memorial Hospital <span style="color:var(--mut)">(Osborne)</span></li>
+<li>Ottawa County Health Center <span style="color:var(--mut)">(Minneapolis)</span></li>
+<li>Pawnee Valley Community Hospital <span style="color:var(--mut)">(Larned)</span></li>
+<li>Phillips County Health Systems <span style="color:var(--mut)">(Phillipsburg)</span></li>
+<li>Pratt Regional Medical Center <span style="color:var(--mut)">(Pratt)</span></li>
+<li>Rawlins County Health Center <span style="color:var(--mut)">(Atwood)</span></li>
+<li>Republic County Health Center <span style="color:var(--mut)">(Belleville)</span></li>
+<li>Rooks County Health Center <span style="color:var(--mut)">(Plainville)</span></li>
+<li>Sabetha Community Hospital <span style="color:var(--mut)">(Sabetha)</span></li>
+<li>Salina Regional Health Center <span style="color:var(--mut)">(Salina)</span></li>
+<li>Satanta District Hospital <span style="color:var(--mut)">(Satanta)</span></li>
+<li>Scott County Hospital <span style="color:var(--mut)">(Scott City)</span></li>
+<li>Smith County Memorial Hospital <span style="color:var(--mut)">(Smith Center)</span></li>
+<li>South Central Kansas Regional Medical Center - SCK Health <span style="color:var(--mut)">(Arkansas City)</span></li>
+<li>Southwest Medical Center <span style="color:var(--mut)">(Liberal)</span></li>
+<li>St. Luke Hospital and Living Center <span style="color:var(--mut)">(Marion)</span></li>
+<li>Stafford County Hospital <span style="color:var(--mut)">(Stafford)</span></li>
+<li>Stanton County Hospital <span style="color:var(--mut)">(Johnson City)</span></li>
+<li>Stevens County Hospital <span style="color:var(--mut)">(Hugoton)</span></li>
+<li>Stormont Vail Health - Flint Hills Campus <span style="color:var(--mut)">(Junction City)</span></li>
+<li>Susan B. Allen Memorial Hospital <span style="color:var(--mut)">(El Dorado)</span></li>
+<li>Trego County-Lemke Memorial Hospital <span style="color:var(--mut)">(WaKeeney)</span></li>
+<li>The University of Kansas Health System <span style="color:var(--mut)">(Kansas City)</span></li>
+<li>University of Kansas Health System - Great Bend <span style="color:var(--mut)">(Great Bend)</span></li>
+<li>Wamego Hospital Association <span style="color:var(--mut)">(Wamego)</span></li>
+<li>Washington County Hospital <span style="color:var(--mut)">(Washington)</span></li>
+<li>Wichita County Health Center <span style="color:var(--mut)">(Leoti)</span></li>
+<li>Wilson Medical Center <span style="color:var(--mut)">(Neodesha)</span></li>
+</ol></div><div><h3 class="serif" style="font-size:15px;margin:0 0 6px">Kansas location map</h3><div id="ccaMap" style="background:#FBFAF4;border:1px solid var(--line);border-radius:6px;padding:8px"></div><div class="mapinfo" id="ccaMapInfo"><span style="font-size:12px;color:var(--mut)">Hover or tap a marker to see the hospital name and city. Marker locations are approximate city-level placements.</span></div></div></div>
+</section>
+
+
+<section class="card ink-card" id="cca-watch">
+<div class="eyebrow">CCA watchlist — what to keep in view year after year</div>
+<div class="gaps" id="cca-gaps"></div>
+<div class="dates">Recurring checkpoints: each Annual Report (Aug 30) — does the Downstream Reporting tab name CCA’s sub-recipients? · each Budget Period approval (Oct 31) — what share is CCA prime? · Q3 2027 — PYA rate-analysis report administered by CCA</div>
+</section>
+
+<footer id="cca-src">
+<b>Sources &amp; method — CCA track</b>
+<p>Year 1 named records are the Year 1 dataset rows tagged <code>via: CCA</code> (contracts and sub-awards that the Year 2 Budget Narrative, KHA updates, or the CMS Annual Report identify as administered by 
