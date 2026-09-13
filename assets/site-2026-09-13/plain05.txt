@@ -1,0 +1,114 @@
+irect spend.",chg:"Up $6.6M; Pulsara and the trauma-system build are new."},
+ {id:"44",init:4,name:"Medicaid Provider Incentive Payment",amt:1.24,y1:1.1,owner:"CCA",desc:"$1,000 incentive per rural PCP that connects Medicaid beneficiaries to MCO care coordination ($480K); RPM and ambient monitoring via Windsor at Home; $200K Oracle software extension.",chg:"Windsor at Home named."},
+ {id:"51",init:5,name:"Remote Patient Monitoring",amt:6.75,y1:9.8,owner:"CCA",desc:"BioIntellisense continues Year 1 sites, adds five hospitals, and expands post-discharge monitoring.",chg:"Down $3.0M as Year 1 device build-out completes."},
+ {id:"52",init:5,name:"Telehealth Navigator",amt:0.40,y1:0.2,owner:"CCA",desc:"Three RN telehealth navigators at $127,008 each.",chg:"Continuing."},
+ {id:"53",init:5,name:"Data Infrastructure",amt:3.55,y1:2.3,owner:"KDHE / KDADS / CCA",desc:"Health Data Utility strategic plan incl. an APCD evaluation ($0.99M, contractor TBD); rural HIE connectivity ($1.09M, recipients TBD); KUMC Data Dock diabetes platform via CCA ($1.25M); CCBHC data warehouse via KDADS \u2192 ACMHCK ($0.22M).",chg:"HDU/APCD study is new; proposals were due July 24, 2026."},
+ {id:"54",init:5,name:"Emerging Technology",amt:15.77,y1:16.1,owner:"CCA",desc:"Oracle Clinical AI ambient listening year 2 for 10 non-GPHA sites ($935K); $4.0M for ambient tools at non-Oracle rural clinics; a $10.0M implementation pool for committee-selected technologies (replacing the competitive funding pool); BioSTL ($670K) and Kansas Health Institute ($160K).",chg:"Competitive Emerging Technology pool replaced by a $10M CCA-administered implementation pool."}
+];
+
+/* Named-recipient registry — first-tier primes and named downstream partners (Year 2 Budget Narrative). prime = KDHE first-tier holder. tbd = no named end recipient. pay = payer-strategy line. */
+var Y2ROWS=[
+ {r:"Care Collaborative Association (CCA) \u2014 admin contract",v:"Contract",amt:1302384.96,init:0,prime:"CCA",note:"Grant-assistance services across all programs; flat fee $108,532/month"},
+ {r:"KDADS \u2014 administrative costs",v:"Subrecipient",amt:376286.52,init:0,prime:"KDADS",note:"Program manager, 2 QA specialists, allocated finance staff; 15.6% indirect"},
+ {r:"Boston Consulting Group (BCG)",v:"Contract",amt:4750000,init:0,prime:"KDHE",note:"Rapid-response implementation support at KDHE; time and expense"},
+ {r:"BDO Government Services",v:"Contract",amt:4128000,init:0,prime:"KDHE",note:"Fiscal agent; compliance and audit-ready documentation"},
+ {r:"Kansas State Department of Education (KSDE)",v:"TBD",amt:50000,init:0,prime:"KDHE",tbd:true,note:"Presidential Fitness Test equipment/supplies; agreement not yet executed"},
+ {r:"Existing implementing orgs (7, Year 1 cohort): Hutchinson Regional, Hospital District #6 Harper County, Citizens Foundation, Great Plains of Smith County, Memorial Health System (Dickinson), CommonSpirit Kansas, Newman Memorial",v:"Subrecipient",amt:1143890.29,init:1,prime:"KDHE",note:"CHW + Food-Is-Medicine continuation; ~2 CHWs per site at $44,117"},
+ {r:"New implementing orgs (7, Year 2 cohort)",v:"Subrecipient",amt:1451890.29,init:1,prime:"KDHE",tbd:true,note:"Via RFA or Year 1 non-awardees; includes $455K food-systems support"},
+ {r:"K-State Research &amp; Extension",v:"Subrecipient",amt:1729909.92,init:1,prime:"KDHE",note:"8 CHWs, program manager, 2 dietitians, 3 food-systems specialists; market feasibility"},
+ {r:"Sunflower Foundation \u2014 FIM technical assistance",v:"Subrecipient",amt:787925.60,init:1,prime:"KDHE",note:"Contracts KUMC (Dr. Bridge), UKCRI (Dr. Harvey), Univ. of Oklahoma (Dr. Wetherhill)"},
+ {r:"CCA \u2014 remote patient monitoring (CHW+AFIM)",v:"Contract",amt:136376.24,init:1,prime:"CCA",note:"RPM supplies at $8,855.60 per site \u00d7 14 sites"},
+ {r:"UKCRI \u2014 Quick Start CHW training",v:"Contract",amt:21006.06,init:1,prime:"KDHE",note:"$250/student; KU Jayhawk Global access"},
+ {r:"CHW core-competency training organizations",v:"Task order",amt:110000,init:1,prime:"KDHE",tbd:true,note:"~4 approved Kansas course providers via RFP; $25K/course"},
+ {r:"CCA \u2192 KUMC \u2014 THRIVE computerized CBT (CCBHT)",v:"Subrecipient",amt:5648883.10,init:1,prime:"CCA",note:"Platform licensing $1.9M, outreach $0.2M, 20 CHWs $2.94M, QAPI $0.1M, indirect $0.51M"},
+ {r:"CCA \u2192 KUMC \u2014 LEAP! brain-health program",v:"Subrecipient",amt:500000,init:1,prime:"CCA",note:"Alzheimer\u2019s Disease Research Center program extended to rural Kansas"},
+ {r:"CCA \u2192 Alzheimer\u2019s Association \u2014 My ALZ Journey",v:"Subrecipient",amt:400000,init:1,prime:"CCA",note:"Kansas community-resource database and planning tool; $100K external build"},
+ {r:"CCA \u2192 fitness/nutrition/lifestyle app vendor",v:"Subrecipient",amt:250000,init:1,prime:"CCA",tbd:true,note:"Vendor selected via Year 1 RFP; not named in the narrative"},
+ {r:"CCA \u2192 Asynchronous Diabetes Prevention Program",v:"Subrecipient",amt:338412,init:1,prime:"CCA",tbd:true,note:"13 CDC video modules, nurse coach $78K, remote-monitoring contractor $111,660; vendor unnamed"},
+ {r:"KDADS \u2192 Sunflower Foundation \u2014 BH integration (Farley Health Policy Center, HealthTeamWorks)",v:"Subrecipient",amt:2867193.67,init:1,prime:"KDADS",note:"74 new clinics; $1.85M in $25K clinic infrastructure payments; CCA telehealth PM $136,740"},
+ {r:"KDADS \u2192 6 rural nursing facilities + Myers &amp; Stauffer",v:"Subrecipient",amt:1463861.09,init:1,prime:"KDADS",pay:true,note:"$175 per resident per Medicaid day; M&amp;S $125K designs a Medicaid NF behavioral-health add-on payment"},
+ {r:"KDADS \u2192 Healthsource Integrated Solutions (ACMHCK)",v:"Subrecipient",amt:1887945.75,init:1,prime:"KDADS",note:"BH intervention hubs at 6 regional EDs; ~3 case managers per hub, 2 shared psychiatric APRNs"},
+ {r:"KDHE \u2192 UKMCRI \u2014 pediatric &amp; perinatal mental health teams",v:"Task order",amt:1257253.88,init:1,prime:"KDHE",note:"Pediatric psychiatric access; training and consultation for rural PCPs"},
+ {r:"KDHE \u2192 UKCRI \u2014 perinatal workforce &amp; materials",v:"Task order",amt:200058.10,init:1,prime:"KDHE",note:"Rural-ready clinical practice materials, outreach"},
+ {r:"KDHE \u2192 Postpartum Support International, Kansas (PSI-KS)",v:"Subrecipient",amt:235400,init:1,prime:"KDHE",note:"Perinatal BH screening QI and training"},
+ {r:"KDHE \u2192 Kansas Chapter, American Academy of Pediatrics (KAAP)",v:"Subrecipient",amt:122964.60,init:1,prime:"KDHE",note:"Practitioner outreach, recruitment, training"},
+ {r:"KDADS \u2192 Behavioral Health Network of Kansas (BHNK)",v:"Subrecipient",amt:1568470.49,init:1,prime:"KDADS",note:"Statewide SUD referral network: tech $450K, marketing $524K, provider contracts $160K"},
+ {r:"KDADS \u2192 Bluestem PACE \u2014 NE Kansas expansion + SW Frontier PACE pilot",v:"Subrecipient",amt:6300000,init:1,prime:"KDADS",note:"$3.2M Northeast service-area expansion; $3.1M Frontier PACE microsite pilot"},
+ {r:"KDADS \u2192 Midland PACE",v:"Subrecipient",amt:1000000,init:1,prime:"KDADS",note:"$500K alternate care sites + $500K outreach/enrollment"},
+ {r:"KDADS \u2192 CCA \u2014 AI ambient monitoring for dual eligibles",v:"Subrecipient",amt:178561.50,init:1,prime:"KDADS",note:"50 devices, nurse program manager $132,563; offset by billable services after Year 1"},
+ {r:"CCA \u2192 KU Cancer Center \u2014 mobile screening unit",v:"Subrecipient",amt:144000,init:1,prime:"CCA",note:"10 more rural communities at $14,400 each"},
+ {r:"Prairie Band Potawatomi Nation",v:"Subrecipient",amt:666666.67,init:1,prime:"KDHE",note:"Tribal health; Tribe-designed prevention plan"},
+ {r:"White Cloud Health Center (Sac &amp; Fox Nation; Iowa Tribe)",v:"Subrecipient",amt:666666.67,init:1,prime:"KDHE",note:"Tribal health; Tribe-designed prevention plan"},
+ {r:"Kickapoo Tribe in Kansas",v:"Subrecipient",amt:666666.67,init:1,prime:"KDHE",note:"Tribal health; Tribe-designed prevention plan"},
+ {r:"Regional Partnership Grant Program awardees",v:"Subrecipient",amt:44000000,init:2,prime:"KDHE",tbd:true,note:"Second statewide RFA; collaborative regional projects incl. clinically integrated networks"},
+ {r:"REH Conversion / Capital Investment grant awardees",v:"Subrecipient",amt:11335897.12,init:2,prime:"KDHE",tbd:true,note:"Second statewide RFA; REH renovations and transformative capital"},
+ {r:"CCA \u2192 PYA, P.C. \u2014 commercial rate analysis (data extraction $258,750 + chargemaster reviews $250,000)",v:"Subrecipient",amt:508750,init:2,prime:"CCA",pay:true,note:"Year 1 obligated $1,500,000 to PYA (Annual Report KS12); Year 2 responds to \u201c2/3 of rural hospitals below Medicare allowable\u201d"},
+ {r:"CCA \u2192 Healthworks KHA Foundation \u2014 revenue-cycle support, payer dashboard, CFO training",v:"Subrecipient",amt:464500,init:2,prime:"CCA",pay:true,note:"$375K extends the Year 1 RCM team, $25K legal, $52K payer dashboard, $12.5K CFO training; pursues claims recovery on providers\u2019 behalf"},
+ {r:"CCA \u2192 Healthworks KHA Foundation \u2014 centralized credentialing (CVO)",v:"Subrecipient",amt:483015,init:2,prime:"CCA",pay:true,note:"Credentialing specialist + curriculum; scales to credentialing providers with payers on hospitals\u2019 behalf (PN p. 31)"},
+ {r:"CCA \u2192 direct-to-employer contracting consultant",v:"Contract",amt:186000,init:2,prime:"CCA",pay:true,tbd:true,note:"Competitively secured; Year 1 obligated $114,000 (Annual Report KS14); consultant not named"},
+ {r:"CCA \u2192 Anchor Hospital Advancement Program (AHAP) \u2014 urban NFP systems JV",v:"Subrecipient",amt:18350000,init:2,prime:"CCA",pay:true,note:"AI/EHR $9.8M, regional initiatives $5.0M, recruitment $2.0M, SMEs $0.4M, management fees $1.15M; 10 rural anchor hospitals"},
+ {r:"CCA \u2192 Kansas technical college / Oracle \u2014 mobile integrated health pilot",v:"Subrecipient",amt:668115,init:2,prime:"CCA",note:"5 CMAs at $32.45/hr for 6 months; RN program manager $140K; Oracle software $200K"},
+ {r:"KDHE \u2192 KUMC \u2014 population health team (PC\u2013PH integration)",v:"Subrecipient",amt:294654,init:2,prime:"KDHE",note:"Team $117,597, data support $130K, 10% indirect"},
+ {r:"Local Health Department #2",v:"Subrecipient",amt:150000,init:2,prime:"KDHE",tbd:true,note:"Selected from regional/statewide needs assessment"},
+ {r:"Local Health Department #3",v:"Subrecipient",amt:150000,init:2,prime:"KDHE",tbd:true,note:"Selected from regional/statewide needs assessment"},
+ {r:"CCA \u2192 Healthworks \u2014 workforce project management",v:"Subrecipient",amt:517928,init:3,prime:"CCA",note:"PM for rotations/housing, nurse residency, preceptorships, CTE, career expos"},
+ {r:"CCA \u2192 AHAP \u2014 rural residency pathways",v:"Subrecipient",amt:4996800,init:3,prime:"CCA",note:"Office of Rural Residency Programs coordinating KU SOM Kansas City, Wichita, Salina"},
+ {r:"CCA \u2192 Kansas College of Osteopathic Medicine",v:"Subrecipient",amt:322460.91,init:3,prime:"CCA",note:"Expands HRSA rural family-medicine residency planning work"},
+ {r:"CCA \u2192 KUMC Institute for Community Engagement \u2014 Kansas Bridging Plan",v:"Subrecipient",amt:709493,init:3,prime:"CCA",note:"$550K physician incentives, $85K personnel, $10K tracking software, 10% indirect"},
+ {r:"Kansas Board of Regents (KBOR)",v:"Subrecipient",amt:5743320,init:3,prime:"KDHE",note:"220 undergraduate/technical awards at $5K, 100 post-graduate at $15K; $2.5M allied-health training grants; 10% indirect"},
+ {r:"Kansas Dental Association (KDA)",v:"Subrecipient",amt:712666.04,init:3,prime:"KDHE",note:"10 dental awards at $50K, 15 hygiene awards at $10K; 5-year rural commitment"},
+ {r:"CCA \u2014 mobile simulation lab",v:"Contract",amt:346025.60,init:3,prime:"CCA",note:"RN trainer (0.5 FTE) and program manager; $90K training supplies"},
+ {r:"CCA \u2014 rural nurse residency + preceptor payments",v:"Subrecipient",amt:220000,init:3,prime:"CCA",note:"$50K curriculum licensing for 5 more hospitals; $150K second preceptor cohort"},
+ {r:"KDADS \u2192 Healthworks \u2192 Hamilton-Ryker TalentGro \u2014 BH apprenticeships",v:"Subrecipient",amt:158400,init:3,prime:"KDADS",note:"5-year rural practice commitment"},
+ {r:"CCA \u2192 KUMC Institute for Community Engagement \u2014 rural HOSA chapters + career expos",v:"Subrecipient",amt:224570,init:3,prime:"CCA",note:"$204,570 HOSA; $20K for two regional expos"},
+ {r:"CCA \u2192 participating rural hospitals &amp; clinics \u2014 Evidence-Based Practices (infrastructure fund + P4P)",v:"Subrecipient",amt:41927340,init:4,prime:"CCA",pay:true,note:"$21.25M infrastructure ($100K/hospital, $50K/clinic); quarterly P4P $25K/$12.5K; up to 100 hospitals + 225 clinics; includes CCA staff of 3 PI specialists + data manager"},
+ {r:"CCA \u2192 Kansas Hospital Association \u2014 QHi reporting platform",v:"Contract",amt:289485,init:4,prime:"CCA",note:"Programming $173,714 + subscriptions $98,400 for up to 250 clinics + indirect"},
+ {r:"CCA \u2192 Belong Health \u2014 shadow ACO",v:"Subrecipient",amt:2901391.75,init:4,prime:"CCA",pay:true,note:"$44 PBPM admin + $5 PBPM pop-health; $125/$75/$50 activity incentives; 2\u20133 new sites, ~2,500 lives"},
+ {r:"Interfacility transport grant awardee(s)",v:"Subrecipient",amt:870958.97,init:4,prime:"KDHE",tbd:true,note:"Regional RFA or continuation of Year 1 awardee"},
+ {r:"KDADS \u2192 behavioral-health crisis-transport vendor",v:"Subrecipient",amt:2706000,init:4,prime:"KDADS",tbd:true,note:"Statewide 24/7 secure transport network; competitive procurement"},
+ {r:"Global Medical Response (GMR) \u2014 non-emergency 911",v:"Contract",amt:3250000,init:4,prime:"KDHE",note:"Personnel $1.42M, equipment $0.87M, community engagement $0.4M, implementation $0.4M"},
+ {r:"CCA \u2014 EMS treat-in-place / alternative destination reimbursement",v:"Subrecipient",amt:909738.08,init:4,prime:"CCA",pay:true,note:"$250 per encounter to the new Kansas Medicaid fee schedule; ~8,852 encounters; coder + project manager"},
+ {r:"Non-emergency medical transportation (NEMT) grant awardees",v:"Subrecipient",amt:3000000,init:4,prime:"KDHE",tbd:true,note:"Local community solutions; program launches in Year 2"},
+ {r:"Pulsara \u2014 trauma communication platform",v:"Contract",amt:2690000,init:4,prime:"KDHE",note:"Statewide HIPAA-compliant EMS-to-ED communication and logistics"},
+ {r:"KDHE Trauma Program \u2014 direct spend",v:"Other",amt:1486500,init:4,prime:"KDHE",tbd:true,note:"6 new KDHE trauma positions ($600K), preventable mortality review, regional councils, EMS readiness ($250K), Level IV/V support ($500K)"},
+ {r:"CCA \u2192 Windsor at Home + Oracle \u2014 Medicaid provider incentive program",v:"Subrecipient",amt:1236466.50,init:4,prime:"CCA",pay:true,note:"$480K in $1,000 incentives to PCPs; Windsor at Home RPM/ambient $223K; Oracle $200K; practice facilitator + RPM nurse"},
+ {r:"CCA \u2192 BioIntellisense \u2014 remote patient monitoring",v:"Subrecipient",amt:6750000,init:5,prime:"CCA",note:"Continues Year 1 sites; adds 5 hospitals; expands post-discharge monitoring"},
+ {r:"CCA \u2014 telehealth navigators",v:"Subrecipient",amt:396714,init:5,prime:"CCA",note:"3 RN care coordinators at $127,008"},
+ {r:"Health Data Utility / data-strategy contractor (incl. APCD evaluation)",v:"Task order",amt:987500,init:5,prime:"KDHE",tbd:true,pay:true,note:"Landscape assessment, governance, and HDU roadmap; evaluates whether an all-payer claims database is recommended; proposals were due July 24, 2026"},
+ {r:"Kansas-certified HIEs / rural connectivity recipients",v:"Contract",amt:1090500,init:5,prime:"KDHE",tbd:true,note:"Recipients selected by Q2 2027 based on connectivity gaps"},
+ {r:"CCA \u2192 KUMC Endocrinology \u2014 Data Dock diabetes platform",v:"Subrecipient",amt:1250000,init:5,prime:"CCA",note:"EHR + CGM data synthesis; additional rural pilot sites"},
+ {r:"KDADS \u2192 Association of Community Mental Health Centers \u2014 CCBHC data warehouse",v:"Subrecipient",amt:217117.50,init:5,prime:"KDADS",note:"$180K platform + 0.25 FTE data scientist"},
+ {r:"CCA \u2192 Oracle / 10 non-GPHA rural sites \u2014 ambient listening, year 2",v:"Subrecipient",amt:935476,init:5,prime:"CCA",note:"Second year of Oracle Clinical AI Enterprise access"},
+ {r:"CCA \u2192 non-Oracle rural clinics \u2014 ambient listening tools",v:"Subrecipient",amt:4000000,init:5,prime:"CCA",tbd:true,note:"~half of clinics statewide; tools vetted by BioSTL; recipients TBD"},
+ {r:"CCA \u2014 implementation pool for committee-selected technologies",v:"Subrecipient",amt:10000000,init:5,prime:"CCA",tbd:true,note:"Replaces the competitive Emerging Technology funding pool; selections via the Emerging Technology Committee"},
+ {r:"CCA \u2192 BioSTL \u2014 technology committee subject-matter expert",v:"Contract",amt:670000,init:5,prime:"CCA",note:"St. Louis nonprofit; curates and convenes the expert committee"},
+ {r:"CCA \u2192 Kansas Health Institute \u2014 committee facilitation",v:"Contract",amt:160000,init:5,prime:"CCA",note:"Four in-person meetings; $46,700 work-group deliverables"}
+];
+
+/* Year 1 actuals — CMS Annual Report workbook (first reporting period) */
+var Y1ACT={obligated:126958972,disbursed:5548611,cca_obl:101297528,cca_dis:1167660,kdads_obl:17720949,bcg_obl:4750000,bcg_dis:3437500,rate_obl:1500000,rcm_cvo_obl:3605843,dte_obl:114000,aco_obl:3400000,aco_dis:500000,neg_margin_pct:86.2,rpgp_rehcap_announced:81193347};
+
+/* ================= RENDER ================= */
+var totalRows=Y2ROWS.reduce(function(s,r){return s+r.amt;},0);
+var tbdTotal=Y2ROWS.filter(function(r){return r.tbd;}).reduce(function(s,r){return s+r.amt;},0);
+var ccaTotal=Y2ROWS.filter(function(r){return r.prime==="CCA";}).reduce(function(s,r){return s+r.amt;},0);
+var kdadsTotal=Y2ROWS.filter(function(r){return r.prime==="KDADS";}).reduce(function(s,r){return s+r.amt;},0);
+var kdheTotal=AWARD2-ccaTotal-kdadsTotal;
+var provPay=30711851.83, provCapPct=92, adminUse=17504317.90, adminCapPct=79, capexUse=15898181.83, capexPct=36;
+
+/* KPIs */
+if(cq("#y2-kpis"))cq("#y2-kpis").innerHTML=[
+ ["Year 2 Proposed Budget","$221,898,008","Budget Period 2: Oct 31, 2026 \u2013 Oct 30, 2027 \u00b7 identical topline all five years"],
+ ["Routed through CCA as prime",fM(ccaTotal),pct(ccaTotal,AWARD2)+" of the plan \u00b7 KU Health System subsidiary is prime in every initiative"],
+ ["Provider payments (capped Cat. B)",fM(provPay),provCapPct+"% of the provider-payment cap \u00b7 funds services the plan calls \u201ccurrently non-reimbursable\u201d"],
+ ["No named end recipient yet",fM(tbdTotal),pct(tbdTotal,AWARD2)+" of the plan \u00b7 RFAs, vendor selections, and CCA-held pools"]
+].map(function(c){return '<div class="card kpi"><div class="k">'+c[0]+'</div><div class="v serif">'+c[1]+'</div><div class="s">'+c[2]+'</div></div>';}).join("");
+
+/* Silos (same drawing as Year 1) */
+function silo(label,value,p,note,fill){
+ var H=230,Wd=78,fh=Math.max(3,(H-26)*Math.min(p,1)),ticks="";
+ [0.25,0.5,0.75].forEach(function(t){var y=26+(H-26)*(1-t);ticks+='<line x1="18" x2="30" y1="'+y+'" y2="'+y+'" stroke="#1C2733" stroke-width="1.4"/><text x="34" y="'+(y+4)+'" font-size="9" fill="#6B6B5F" font-family="ui-monospace,monospace">'+(t*100)+'%</text>';});
+ return '<div class="silo"><svg width="'+(Wd+36)+'" height="'+(H+44)+'"><path d="M18 26 L'+(18+Wd/2)+' 6 L'+(18+Wd)+' 26 Z" fill="#1C2733"/><rect x="18" y="26" width="'+Wd+'" height="'+(H-26)+'" rx="4" fill="#E8E2D2" stroke="#1C2733" stroke-width="2.5"/><rect x="20.5" y="'+(26+(H-26)-fh)+'" width="'+(Wd-5)+'" height="'+fh+'" rx="3" fill="'+fill+'" opacity="0.92"/>'+ticks+'<text x="'+(18+Wd/2)+'" y="'+(H+22)+'" text-anchor="middle" font-size="19" font-weight="700" fill="#1C2733" font-family="Georgia,serif">'+(p*100).toFixed(1)+'%</text><text x="'+(18+Wd/2)+'" y="'+(H+38)+'" text-anchor="middle" font-size="10" fill="#6B6B5F">'+fM(value)+' of '+fM(AWARD2)+'</text></svg><div class="lab">'+label+'</div><div class="note">'+note+'</div></div>';
+}
+var named=AWARD2-tbdTotal;
+if(cq("#y2-silos"))cq("#y2-silos").innerHTML=silo("Named rec
