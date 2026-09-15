@@ -1,0 +1,39 @@
+window.applySept15Awards=function(html){
+const total=172325259.21;
+const rows=[
+{"org":"Pulse Transport, LLC","city":"Pratt","county":"Pratt","program":"Interfacility Transport","amount":455919.21,"geo":"Rural","desc":"Regional interfacility dispatch and coordination center with dedicated BLS and advanced transport teams; at least 12 full-time clinicians and four PRN employees.","lat":37.64,"lon":-98.74,"via":"KDHE"},
+{"org":"Labette County Medical Center","city":"Parsons","county":"Labette","program":"Interfacility Transport","amount":325000,"geo":"Rural","desc":"One-time capital for a transit-style ALS ambulance and medical equipment to establish the SEK Health Regional ALS Transport Service.","lat":37.34,"lon":-95.26,"via":"KDHE"},
+{"org":"CommonSpirit Kansas","city":"Garden City","county":"Finney","program":"Emerging Technology","amount":2980250,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":37.97,"lon":-100.87,"via":"KDHE"},
+{"org":"UKHS Great Bend","city":"Great Bend","county":"Barton","program":"Emerging Technology","amount":2960927,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":38.36,"lon":-98.76,"via":"KDHE"},
+{"org":"Rooks County Health Center","city":"Plainville","county":"Rooks","program":"Emerging Technology","amount":1704066,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":39.23,"lon":-99.30,"via":"KDHE"},
+{"org":"GoodLife Innovations","city":"Lenexa","county":"Johnson","program":"Emerging Technology","amount":1169246,"geo":"Urban","desc":"2026 KDHE Emerging Technology Grant award; technology serving rural Kansans.","lat":38.95,"lon":-94.73,"via":"KDHE"},
+{"org":"Via Christi Village Hays","city":"Hays","county":"Ellis","program":"Emerging Technology","amount":1145446,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":38.88,"lon":-99.33,"via":"KDHE"},
+{"org":"Genesis Family Health","city":"Garden City","county":"Finney","program":"Emerging Technology","amount":1059190,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":37.97,"lon":-100.87,"via":"KDHE"},
+{"org":"Sumner Mental Health Center","city":"Wellington","county":"Sumner","program":"Emerging Technology","amount":975334,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":37.27,"lon":-97.40,"via":"KDHE"},
+{"org":"Prairie View Inc","city":"Newton","county":"Harvey","program":"Emerging Technology","amount":729081,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":38.05,"lon":-97.35,"via":"KDHE"},
+{"org":"NMC Health","city":"Newton","county":"Harvey","program":"Emerging Technology","amount":662642,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":38.05,"lon":-97.35,"via":"KDHE"},
+{"org":"Grisell Memorial Hospital","city":"Ransom","county":"Ness","program":"Emerging Technology","amount":350000,"geo":"Frontier","desc":"2026 KDHE Emerging Technology Grant award.","lat":38.64,"lon":-99.93,"via":"KDHE"},
+{"org":"Meade Hospital District","city":"Meade","county":"Meade","program":"Emerging Technology","amount":141098,"geo":"Frontier","desc":"2026 KDHE Emerging Technology Grant award.","lat":37.29,"lon":-100.34,"via":"KDHE"},
+{"org":"Rice County Hospital District #1","city":"Lyons","county":"Rice","program":"Emerging Technology","amount":1377990,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":38.35,"lon":-98.20,"via":"KDHE"},
+{"org":"Attica Hospital District #1, Harper County","city":"Attica","county":"Harper","program":"Emerging Technology","amount":532045,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":37.24,"lon":-98.23,"via":"KDHE"},
+{"org":"Valley Hope Association","city":"Norton","county":"Norton","program":"Emerging Technology","amount":219333,"geo":"Rural","desc":"2026 KDHE Emerging Technology Grant award.","lat":39.83,"lon":-99.89,"via":"KDHE"}
+];
+html=html.replace('const AWARD=221898007.82, SUBAWARDS=155537692,','const AWARD=221898007.82, SUBAWARDS='+total+',');
+html=html.replace('const ROWS=[','const ROWS='+JSON.stringify(rows).slice(0,-1)+',');
+html=html.replace('through Sept. 6, 2026','through Sept. 15, 2026');
+html=html.replace('All 66 named awards, contracted implementations, and budget-narrative contracts are represented.','All 82 named awards, contracted implementations, and budget-narrative contracts are represented.');
+html=html.replace('All 66 named awards, contracted implementations, and budget-narrative contracts classified','All 82 named awards, contracted implementations, and budget-narrative contracts classified');
+html=html.replace('All 66 named awards, contracted implementations, and budget-narrative contracts</h2>','All 82 named awards, contracted implementations, and budget-narrative contracts</h2>');
+html=html.replace('66 tracked award and contract records totaling $155,537,692','82 tracked award and contract records totaling $172,325,259.21');
+html=html.replace('Public edition. Updated September 13, 2026.','Public edition. Updated September 15, 2026.');
+html=html.replace('Updated September 13, 2026 · Year 2 plan + third CIN added','Updated September 15, 2026 · IFT + Emerging Technology awards added');
+html=html.replace('<div class="opp"><span class="pill awarded">Pending Award</span><h3>Interfacility Transport Project (IFTp)</h3><div class="oamt">~$868K Y1</div><div class="odue">Application window closed July 31, 2026</div><div class="odesc">Launches the first of seven planned regional 24/7/365 paramedic-plus-RN transport teams to reduce transfer delays from rural facilities.</div></div>','<div class="opp"><span class="pill awarded">Awarded</span><h3>Interfacility Transport Project (IFTp)</h3><div class="oamt">$780,919.21 awarded</div><div class="odue">Awards announced September 14, 2026 · 2 recipients</div><div class="odesc">Pulse Transport, LLC ($455,919.21) and Labette County Medical Center ($325,000) will pilot new interfacility transport models to reduce transfer delays.</div></div>');
+html=html.replace('"name":"Emerging Technology","amt":16.1,"status":"Pending"','"name":"Emerging Technology","amt":16.006648,"status":"Awarded"');
+html=html.replace('"name":"Emerging Technology","amt":16.1,"status":"Open RFA"','"name":"Emerging Technology","amt":16.006648,"status":"Awarded"');
+html=html.replace('"name":"Transportation","amt":8.4,"owner":"KDHE","phase":0','"name":"Transportation","amt":8.4,"owner":"KDHE","phase":2');
+html=html.replace('"name":"Emerging Technology","amt":16.1,"owner":"KDHE / CCA","phase":1','"name":"Emerging Technology","amt":16.1,"owner":"KDHE / CCA","phase":2');
+html=html.replace('"RFA open for provider applicants","Agreement signed with program owner (CCA) for a portion","Emerging Tech Committee convened and finalizing workplan"','"14 Emerging Technology awards announced September 15, 2026 totaling $16,006,648","72 applications received by KDHE","Awardees are included in the named-awards table and map"');
+html=html.replace('"Agreement signed with program owner (KDADS) for one project","Year 1 design underway for all projects, with forthcoming RFA and RFP"','"Interfacility Transport awards announced September 14, 2026: 2 recipients totaling $780,919.21","Other transportation workstreams remain in development"');
+html=html.replace('{"d":"Aug 13, 2026","t":"CHW + A-FIM awards announced"','{"d":"Sep 15, 2026","t":"Emerging Technology awards announced","s":"14 awards totaling $16,006,648 · 72 applications received","done":true,"pol":false},{"d":"Sep 14, 2026","t":"Interfacility Transport awards announced","s":"2 awards totaling $780,919.21 · Pulse Transport + Labette County Medical Center","done":true,"pol":false},{"d":"Aug 13, 2026","t":"CHW + A-FIM awards announced"');
+return html;
+};
